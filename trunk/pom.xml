@@ -125,7 +125,7 @@
 			<version>1.0.1</version>
 		</dependency>
 
-		<!-- ������ ��Ҫ�����İ� -->
+		<!-- 主搜索 需要依赖的包 -->
 		<dependency>
 			<groupId>com.taobao.common.searchengine</groupId>
 			<artifactId>common-searchengine</artifactId>
