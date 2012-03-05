@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName">
+	<bean id="cardCodeServiceClient" name="cardCodeServiceClient"
+		class="com.taobao.item.service.client.CardCodeServiceClient">
+		<!-- 默认组 -->
+		<property name="cardCodeService">
+			<bean class="com.taobao.hsfunit.app.spring.util.HSFSpringConsumerBean"
+				init-method="init">
+				<property name="interfaceName">
+					<value>com.taobao.item.service.CardCodeService</value>
+				</property>
+				<property name="version" value="1.0.0.daily"></property>
+				
+			</bean>
+		</property>
+		
+		
+		
+	</bean>
+</beans>
