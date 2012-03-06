@@ -3,6 +3,7 @@
 <beans default-autowire="byName">
 	<bean id="cardCodeServiceClient" name="cardCodeServiceClient"
 		class="com.taobao.item.service.client.CardCodeServiceClient">
+		<!-- 下面三组只需要根据自己的需求配置一组即可，不同组的性能也是不一样的 -->
 		<!-- 默认组 -->
 		<property name="cardCodeService">
 			<bean class="com.taobao.hsfunit.app.spring.util.HSFSpringConsumerBean"
@@ -13,7 +14,7 @@
 				<property name="version" value="1.0.0.daily"></property>
 				<property name="methodSpecials">
 					<list>
-						<!-- 设置调用该接口的超时时间 -->
+						<!-- 设置调用该接口的超时时间，可以给每一个接口都配置，根据自己的需要-->
 						<bean id="getCardCodeInfoByQueryWithPage" class="com.taobao.hsfunit.model.metadata.MethodSpecial">
 							<property name="methodName" value="getCardCodeInfoByQueryWithPage"/>
 							<property name="clientTimeout" value="40" />
@@ -22,7 +23,7 @@
 				</property>
 			</bean>
 		</property>
-		
+		<!-- L1组 卖家组-->
 		<property name="cardCodeServiceL1">
 			<bean class="com.taobao.hsfunit.app.spring.util.HSFSpringConsumerBean"
 				init-method="init">
@@ -41,7 +42,7 @@
 				</property>
 			</bean>
 		</property>
-		
+		<!-- L2组 小二组-->
 		<property name="cardCodeServiceL2">
 			<bean class="com.taobao.hsfunit.app.spring.util.HSFSpringConsumerBean"
 				init-method="init">
