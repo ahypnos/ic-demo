@@ -11,11 +11,54 @@
 					<value>com.taobao.item.service.CardCodeService</value>
 				</property>
 				<property name="version" value="1.0.0.daily"></property>
-				
+				<property name="methodSpecials">
+					<list>
+						<!-- 设置调用该接口的超时时间 -->
+						<bean id="getCardCodeInfoByQueryWithPage" class="com.taobao.hsfunit.model.metadata.MethodSpecial">
+							<property name="methodName" value="getCardCodeInfoByQueryWithPage"/>
+							<property name="clientTimeout" value="40" />
+						</bean>
+					</list>
+				</property>
 			</bean>
 		</property>
 		
+		<property name="cardCodeServiceL1">
+			<bean class="com.taobao.hsfunit.app.spring.util.HSFSpringConsumerBean"
+				init-method="init">
+				<property name="interfaceName">
+					<value>com.taobao.item.service.CardCodeService</value>
+				</property>
+				<property name="version" value="1.0.0.daily"></property>
+				<property name="methodSpecials">
+					<list>
+						<!-- 设置调用该接口的超时时间 -->
+						<bean id="getCardCodeInfoByQueryWithPageL1" class="com.taobao.hsfunit.model.metadata.MethodSpecial">
+							<property name="methodName" value="getCardCodeInfoByQueryWithPage"/>
+							<property name="clientTimeout" value="40" />
+						</bean>
+					</list>
+				</property>
+			</bean>
+		</property>
 		
-		
+		<property name="cardCodeServiceL2">
+			<bean class="com.taobao.hsfunit.app.spring.util.HSFSpringConsumerBean"
+				init-method="init">
+				<property name="interfaceName">
+					<value>com.taobao.item.service.CardCodeService</value>
+				</property>
+				<property name="version" value="1.0.0.daily"></property>
+				<property name="methodSpecials">
+					<list>
+						<!-- 设置调用该接口的超时时间 -->
+						<bean id="getCardCodeInfoByQueryWithPageL2" class="com.taobao.hsfunit.model.metadata.MethodSpecial">
+							<property name="methodName" value="getCardCodeInfoByQueryWithPage"/>
+							<property name="clientTimeout" value="40" />
+						</bean>
+					</list>
+				</property>
+			</bean>
+		</property>
 	</bean>
 </beans>
