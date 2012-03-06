@@ -12,11 +12,11 @@
 				<property name="version" value="1.0.0.daily"></property>
 				<property name="methodSpecials">
 					<list>
-						<bean id="changeTimeoutForUpdateItemField" class="com.taobao.hsf.model.metadata.MethodSpecial">
+						<bean id="changeTimeoutForUpdateItemField" class="com.taobao.hsfunit.model.metadata.MethodSpecial">
 							<property name="methodName" value="xiaoerUpdateItemFields" />
 							<property name="clientTimeout" value="40" />
 						</bean>
-						<bean id="changeTimeoutForDownShelfBidItem" class="com.taobao.hsf.model.metadata.MethodSpecial">
+						<bean id="changeTimeoutForDownShelfBidItem" class="com.taobao.hsfunit.model.metadata.MethodSpecial">
 							<property name="methodName" value="cronAutoDownShelfBidItemSchedule" />
 							<property name="clientTimeout" value="60" />
 						</bean>
