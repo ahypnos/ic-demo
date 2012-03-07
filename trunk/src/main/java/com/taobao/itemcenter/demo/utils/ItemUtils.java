@@ -25,6 +25,11 @@ public class ItemUtils {
 		itemQueryServiceClient = (ItemQueryServiceClient)ac.getBean("itemQueryServiceClient");
 	}
 	
+	/**
+	 * 获取宝贝的简单对象
+	 * @param itemId
+	 * @return
+	 */
 	public static ItemDO getSimpleItem(long itemId){
 		QueryItemOptionsDO options = new QueryItemOptionsDO();
 		AppInfoDO app = new AppInfoDO(AppInfoConstants.NAME_DETAIL, "query", "detail");
@@ -40,8 +45,4 @@ public class ItemUtils {
 		return null;
 	}
 	
-	public static void main(String[] args) {
-		ItemUtils.getSimpleItem(123);
-		System.out.println();
-	}
 }
