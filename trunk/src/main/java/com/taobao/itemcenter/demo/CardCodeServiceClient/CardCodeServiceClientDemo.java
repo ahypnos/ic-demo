@@ -160,7 +160,9 @@ public class CardCodeServiceClientDemo {
 		printLine("resetCardCode接口调用");
 	}
 	
-	
+	public void updateAutoCCInfo_更新卡密信息(){
+		
+	}
 
 	private void printResult(CardCodeQuery query, List<CardCodeDO> result) {
 		if(result == null){
