@@ -10,7 +10,7 @@
 					<value>com.taobao.item.service.AdminService</value>
 				</property>
 				<property name="version" value="1.0.0.daily"></property>
-				<property name="methodSpecials">
+				<!-- <property name="methodSpecials">
 					<list>
 						<bean id="changeTimeoutForUpdateItemField" class="com.taobao.hsfunit.model.metadata.MethodSpecial">
 							<property name="methodName" value="xiaoerUpdateItemFields" />
@@ -21,7 +21,7 @@
 							<property name="clientTimeout" value="60" />
 						</bean>
 					</list>
-				</property>
+				</property> -->
 			</bean>
 		</property>
 	</bean>
