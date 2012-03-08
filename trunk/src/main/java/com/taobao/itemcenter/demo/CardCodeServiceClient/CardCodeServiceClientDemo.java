@@ -36,8 +36,8 @@ public class CardCodeServiceClientDemo {
 
 	public static void main(String[] args) throws IcException {
 		ApplicationContext ac = new ClassPathXmlApplicationContext(
-				new String[] { "cardCodeServiceClient/spirng-ic-core.xml",
-						"cardCodeServiceClient/spirng-ic-hsf.xml" });
+				new String[] { "cardCodeServiceClient/spring-ic-core.xml",
+						"cardCodeServiceClient/spring-ic-hsf.xml" });
 		CardCodeServiceClientDemo cardCodeDemo = (CardCodeServiceClientDemo) ac
 				.getBean("cardCodeDemo");
 		

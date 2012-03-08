@@ -28,8 +28,8 @@ public class ItemReadServiceClientDemo {
 
 	public static void main(String[] args) {
 		ApplicationContext ac = new ClassPathXmlApplicationContext(
-				new String[] { "itemReadServiceClient/spirng-ic-core.xml",
-						"itemReadServiceClient/spirng-ic-hsf.xml" });
+				new String[] { "itemReadServiceClient/spring-ic-core.xml",
+						"itemReadServiceClient/spring-ic-hsf.xml" });
 		ItemReadServiceClientDemo itemReadServiceClientDemo = (ItemReadServiceClientDemo)ac.getBean("itemReadDemo");
 		itemReadServiceClientDemo.querySkuListByOuterId_通过外部编码查询sku信息();
 		System.exit(0);

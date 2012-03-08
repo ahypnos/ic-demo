@@ -40,7 +40,7 @@ public class AdminServiceClientDemo {
 	private AdminServiceClient adminServiceClient;
 
 	public AdminServiceClientDemo() {
-		String[] location = { "adminServiceClient/spirng-ic-hsf.xml" };
+		String[] location = { "adminServiceClient/spring-ic-hsf.xml" };
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				location);
 		adminServiceClient = (AdminServiceClient) context
