@@ -21,7 +21,7 @@ public class ItemUtils {
 	private static ItemQueryServiceClient itemQueryServiceClient;
 	
 	static{
-		ApplicationContext ac = new ClassPathXmlApplicationContext("itemQueryServiceClient/spirng-ic-hsf.xml");
+		ApplicationContext ac = new ClassPathXmlApplicationContext("itemQueryServiceClient/spring-ic-hsf.xml");
 		itemQueryServiceClient = (ItemQueryServiceClient)ac.getBean("itemQueryServiceClient");
 	}
 	
