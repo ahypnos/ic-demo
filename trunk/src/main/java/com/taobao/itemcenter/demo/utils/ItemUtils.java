@@ -13,29 +13,35 @@ import com.taobao.item.service.client.ItemQueryServiceClient;
 
 /**
  * 商品工具类，可以用于获取宝贝信息
+ * 
  * @author tieyi.qlr
- *
+ * 
  */
 public class ItemUtils {
-	
+
 	private static ItemQueryServiceClient itemQueryServiceClient;
-	
-	static{
-		ApplicationContext ac = new ClassPathXmlApplicationContext("itemQueryServiceClient/spring-ic-hsf.xml");
-		itemQueryServiceClient = (ItemQueryServiceClient)ac.getBean("itemQueryServiceClient");
+
+	static {
+		ApplicationContext ac = new ClassPathXmlApplicationContext(
+				"itemQueryServiceClient/spring-ic-hsf.xml");
+		itemQueryServiceClient = (ItemQueryServiceClient) ac
+				.getBean("itemQueryServiceClient");
 	}
-	
+
 	/**
 	 * 获取宝贝的简单对象
+	 * 
 	 * @param itemId
 	 * @return
 	 */
-	public static ItemDO getSimpleItem(long itemId){
+	public static ItemDO getSimpleItem(long itemId) {
 		QueryItemOptionsDO options = new QueryItemOptionsDO();
-		AppInfoDO app = new AppInfoDO(AppInfoConstants.NAME_DETAIL, "query", "detail");
+		AppInfoDO app = new AppInfoDO(AppInfoConstants.NAME_DETAIL, "query",
+				"detail");
 		try {
-			ItemResultDO result = itemQueryServiceClient.queryItemById(itemId, options, app);
-			if(result.isSuccess()){
+			ItemResultDO result = itemQueryServiceClient.queryItemById(itemId,
+					options, app);
+			if (result.isSuccess()) {
 				return result.getItem();
 			}
 		} catch (IcException e) {
@@ -44,5 +50,5 @@ public class ItemUtils {
 		}
 		return null;
 	}
-	
+
 }
