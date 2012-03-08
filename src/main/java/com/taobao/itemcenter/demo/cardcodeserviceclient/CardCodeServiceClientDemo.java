@@ -1,4 +1,4 @@
-package com.taobao.itemcenter.demo.CardCodeServiceClient;
+package com.taobao.itemcenter.demo.cardcodeserviceclient;
 
 import java.util.List;
 import java.util.Map;

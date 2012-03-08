@@ -1,4 +1,4 @@
-package com.taobao.itemcenter.demo.itemSnapServiceClient;
+package com.taobao.itemcenter.demo.itemsnapserviceclient;
 
 import java.util.Date;
 
