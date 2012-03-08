@@ -1,4 +1,4 @@
-package com.taobao.itemcenter.demo.AdminServiceClient;
+package com.taobao.itemcenter.demo.adminserviceclient;
 
 import static com.google.common.collect.Lists.newArrayList;
 

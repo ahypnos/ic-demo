@@ -1,4 +1,4 @@
-package com.taobao.itemcenter.demo.ItemReadServiceClient;
+package com.taobao.itemcenter.demo.itemreadserviceclient;
 
 import java.util.List;
 
@@ -44,6 +44,7 @@ public class ItemReadServiceClientDemo {
 		try {
 			ResultDO<List<ItemSkuDO>> result = 
 					itemReadServiceClient.querySkuListByOuterId(userId, outerId, appInfo);
+			System.out.println("查询是否成功-"+result.isSuccess());
 			System.out.println(result.getModule());
 		} catch (IcException e) {
 			e.printStackTrace();
