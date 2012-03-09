@@ -5,13 +5,12 @@ import static com.google.common.collect.Lists.newArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.commons.logging.Log;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.alibaba.common.logging.LoggerFactory;
 import com.google.common.collect.Maps;
 import com.taobao.item.constant.AppInfoConstants;
 import com.taobao.item.constant.ItemConstants;
@@ -19,7 +18,11 @@ import com.taobao.item.constant.ItemStatusConstants;
 import com.taobao.item.domain.AppInfoDO;
 import com.taobao.item.domain.ItemDO;
 import com.taobao.item.domain.ItemUpdateDO;
+import com.taobao.item.domain.ItemVideoDO;
+import com.taobao.item.domain.result.BaseResultDO;
+import com.taobao.item.domain.result.BatchItemVideoResultDO;
 import com.taobao.item.domain.result.ProcessResultDO;
+import com.taobao.item.domain.result.ResultDO;
 import com.taobao.item.domain.result.XiaoProcessResultDO;
 import com.taobao.item.exception.IcException;
 import com.taobao.item.service.AdminService;
@@ -30,12 +33,11 @@ import com.taobao.uic.common.domain.BaseUserDO;
  * 每一个接口的使用
  * 
  * AdminService 这个接口的示例不是很重要,因为这个接的参数都比较简单,并且没有依赖其他配置
+ * 
  * @author tieyi.qlr
  * 
  */
 public class AdminServiceClientDemo {
-
-	private Log log = LoggerFactory.getLogger(this.getClass());
 
 	private AdminServiceClient adminServiceClient;
 
@@ -65,7 +67,7 @@ public class AdminServiceClientDemo {
 			} else {
 				// 操作失败的ID列表
 				List<Long> failList = result.getErrorItemIdList();
-				log.warn(failList + "operation fail");
+				System.out.println(failList + "  operation fail");
 				// do something
 			}
 		} catch (IcException e) {
@@ -90,7 +92,7 @@ public class AdminServiceClientDemo {
 			} else {
 				// 操作失败的ID列表
 				List<Long> failList = result.getErrorItemIdList();
-				log.warn(failList + "operation fail");
+				System.out.println(failList + "  operation fail");
 				// do something
 			}
 		} catch (IcException e) {
@@ -115,7 +117,7 @@ public class AdminServiceClientDemo {
 			} else {
 				// 操作失败的ID列表
 				List<Long> failList = result.getErrorItemIdList();
-				log.warn(failList + "operation fail");
+				System.out.println(failList + "  operation fail");
 				// do something
 			}
 		} catch (IcException e) {
@@ -139,7 +141,7 @@ public class AdminServiceClientDemo {
 			} else {
 				// 操作失败的ID列表 (这里不是批量更新,这个错误列表基本上用处不大)
 				List<Long> failList = result.getErrorItemIdList();
-				log.warn(failList + "operation fail");
+				System.out.println(failList + "  operation fail");
 				// do something
 			}
 		} catch (IcException e) {
@@ -209,7 +211,7 @@ public class AdminServiceClientDemo {
 			} else {
 				// 操作失败的ID列表
 				List<Long> failList = result.getErrorItemIdList();
-				log.warn(failList + "operation fail");
+				System.out.println(failList + "  operation fail");
 				// do something
 			}
 		} catch (IcException e) {
@@ -237,7 +239,7 @@ public class AdminServiceClientDemo {
 			} else {
 				// 操作失败的ID列表
 				List<Long> failList = result.getErrorItemIdList();
-				log.warn(failList + "operation fail");
+				System.out.println(failList + "  operation fail");
 				// do something
 			}
 		} catch (IcException e) {
@@ -264,7 +266,7 @@ public class AdminServiceClientDemo {
 			} else {
 				// 操作失败的ID列表
 				List<Long> failList = result.getErrorItemIdList();
-				log.warn(failList + "operation fail");
+				System.out.println(failList + "  operation fail");
 				// do something
 			}
 		} catch (IcException e) {
@@ -288,7 +290,7 @@ public class AdminServiceClientDemo {
 			} else {
 				// 操作失败的ID列表
 				List<Long> failList = result.getErrorItemIdList();
-				log.warn(failList + "operation fail");
+				System.out.println(failList + "  operation fail");
 				// do something
 			}
 		} catch (IcException e) {
@@ -312,7 +314,7 @@ public class AdminServiceClientDemo {
 			} else {
 				// 操作失败的ID列表
 				List<Long> failList = result.getErrorItemIdList();
-				log.warn(failList + "operation fail");
+				System.out.println(failList + "  operation fail");
 				// do something
 			}
 		} catch (IcException e) {
@@ -341,8 +343,156 @@ public class AdminServiceClientDemo {
 			} else {
 				// 操作失败的ID列表
 				List<Long> failList = result.getErrorItemIdList();
-				log.warn(failList + "operation fail");
+				System.out.println(failList + "  operation fail");
 				// do something
+			}
+		} catch (IcException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * itemVideo 不能为空 itemVideo.getId() >= 1 itemVideo.getItemId() > 0
+	 * ItemVideoDO.STATUS_FROZEN == itemVideo.getStatus() ||
+	 * ItemVideoDO.STATUS_NORMAL == itemVideo.getStatus()
+	 */
+	public void xiaoerUpdateItemVideo() {
+		ItemVideoDO itemVideo = new ItemVideoDO();
+		itemVideo.setId(1L);
+		/**
+		 * ... ... set 其他值
+		 */
+		try {
+			ResultDO result = adminServiceClient.xiaoerUpdateItemVideo(
+					itemVideo, getOtherAppInfo());
+			if (result.isSuccess()) {
+				// do something
+			} else {
+				// do something
+			}
+		} catch (IcException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void xiaoerUpdateItemVideos() {
+		List<ItemVideoDO> videoList = newArrayList();
+		ItemVideoDO itemVideo = new ItemVideoDO();
+		itemVideo.setId(1L);
+		/**
+		 * ... ... set 其他值
+		 */
+		videoList.add(itemVideo);
+
+		try {
+			// 全部成功的时候才返回成功
+			BatchItemVideoResultDO result = adminServiceClient
+					.xiaoerUpdateItemVideos(videoList, getOtherAppInfo());
+			if (result.isSuccess()) {
+				// do something
+			} else {
+				List<Long> failList = result.getErrorVideoIdList();
+				// do something
+			}
+		} catch (IcException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * see {@link AdminService#xiaoerModifyItemStatus(long, int, AppInfoDO)}
+	 * status 可以为： ItemStatusConstants.DELETED_BY_XIAOER,
+	 * ItemStatusConstants.DELETED, ItemStatusConstants.CC,
+	 * ItemStatusConstants.NORMAL, ItemStatusConstants.PASS
+	 */
+	public void xiaoerModifyItemStatus() {
+		try {
+			BaseResultDO result = adminServiceClient.xiaoerModifyItemStatus(1L,
+					ItemStatusConstants.DELETED_BY_XIAOER, getLoomAppInfo());
+			if (result.isSuccess()) {
+				// do something
+			} else {
+				// do something
+			}
+		} catch (IcException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * see
+	 * {@link AdminService#xiaoerRollbackDeletedItem(long, int, Date, AppInfoDO)}
+	 */
+	public void xiaoerRollbackDeletedItem() {
+		BaseResultDO result = adminServiceClient.xiaoerRollbackDeletedItem(1L,
+				ItemStatusConstants.PASS, new Date(), getLoomAppInfo());
+		if (result.isSuccess()) {
+			// do something
+		} else {
+			// do something
+		}
+	}
+
+	/**
+	 * see
+	 * {@link AdminService#cronUpdateQuantityAndDownShelfBidItem(long, Integer, AppInfoDO)}
+	 */
+	public void cronUpdateQuantityAndDownShelfBidItem() {
+		try {
+			XiaoProcessResultDO result = adminServiceClient
+					.cronUpdateQuantityAndDownShelfBidItem(1L, 0,
+							getOtherAppInfo());
+			if (result.isSuccess()) {
+				// do something
+			} else {
+				// do something
+			}
+		} catch (IcException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * see
+	 * {@link AdminService#xiaoerUpdateItemSpuInfo(List, ItemUpdateDO, AppInfoDO)}
+	 */
+	public void xiaoerUpdateItemSpuInfo() {
+		List<Long> itemIds = newArrayList();
+		itemIds.add(1L); // 最多40个
+
+		ItemUpdateDO updateDO = new ItemUpdateDO(1L);
+		updateDO.setSpuId(111L);
+		updateDO.setReplaceCategoryIdOfItemFromSpu(true);
+		updateDO.setReplaceKeyPropertiesOfItemFromSpu(true);
+		try {
+			// 只要有一个成功就返回成功
+			XiaoProcessResultDO result = adminServiceClient
+					.xiaoerUpdateItemSpuInfo(itemIds, updateDO,
+							getLoomAppInfo());
+			if (result.isSuccess()) {
+				// do something
+			} else {
+				List<Long> failList = result.getErrorItemIdList();
+				// do something
+			}
+		} catch (IcException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void touch() {
+		List<Long> itemIds = newArrayList();
+		itemIds.add(1L); // 最多20个
+
+		try {
+			XiaoProcessResultDO result = adminServiceClient.touch(itemIds,
+					getOtherAppInfo());
+			if (result.isSuccess()) {
+				// do something
+			} else {
+				// do something
+				// 失败的商品列表，和失败的原因错误码
+				Map<Long, Set<String>> failMap = result.getItemIdErrorCodeMap();
 			}
 		} catch (IcException e) {
 			e.printStackTrace();
@@ -379,7 +529,7 @@ public class AdminServiceClientDemo {
 	}
 
 	public static void main(String[] args) {
-		new AdminServiceClientDemo();
+		new AdminServiceClientDemo().xiaoerDelItem();
 	}
 
 }
