@@ -47,7 +47,7 @@ public class ItemReadServiceClientDemo {
 		// itemId=1500005280670 可以查询这个宝贝
 		userId = 175754155;
 		outerId = "TIEYI";
-		this.printLine("querySkuListByOuterId接口调用");
+		printLine("querySkuListByOuterId接口调用");
 		try {
 			ResultDO<List<ItemSkuDO>> result = itemReadServiceClient
 					.querySkuListByOuterId(userId, outerId, appInfo);
@@ -56,7 +56,7 @@ public class ItemReadServiceClientDemo {
 		} catch (IcException e) {
 			e.printStackTrace();
 		}
-		this.printLine("querySkuListByOuterId接口调用");
+		printLine("querySkuListByOuterId接口调用");
 	}
 
 	/**

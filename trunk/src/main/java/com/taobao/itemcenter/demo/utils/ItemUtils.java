@@ -29,13 +29,14 @@ public class ItemUtils {
 	}
 
 	/**
-	 * 获取宝贝的简单对象
-	 * 
-	 * @param itemId
+	 * 获取简单的宝贝对象
+	 * @param itemId 宝贝ID
+	 * @param hasSku 是否包含sku
 	 * @return
 	 */
-	public static ItemDO getSimpleItem(long itemId) {
+	public static ItemDO getSimpleItem(long itemId,boolean hasSku) {
 		QueryItemOptionsDO options = new QueryItemOptionsDO();
+		options.setIncludeSkus(hasSku);
 		AppInfoDO app = new AppInfoDO(AppInfoConstants.NAME_DETAIL, "query",
 				"detail");
 		try {
@@ -50,5 +51,6 @@ public class ItemUtils {
 		}
 		return null;
 	}
+	
 
 }
