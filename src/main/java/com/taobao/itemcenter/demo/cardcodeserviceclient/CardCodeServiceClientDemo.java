@@ -196,7 +196,7 @@ public class CardCodeServiceClientDemo {
 	public void updateAutoCCInfo_更新卡密信息() throws IcException {
 		itemId = 1500004274891L;
 		String autoArea = "32132143123 32132143123";
-		ItemDO item = ItemUtils.getSimpleItem(itemId);
+		ItemDO item = ItemUtils.getSimpleItem(itemId,false);
 		printLine("updateAutoCCInfo接口调用");
 		if (item == null) {
 			System.out.println("没有查询到该宝贝，请检查该卡密宝贝是否存在！");
