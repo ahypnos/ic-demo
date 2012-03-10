@@ -1,6 +1,7 @@
 package com.taobao.itemcenter.demo.itemextraserviceclient;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.context.ApplicationContext;
@@ -9,10 +10,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.taobao.item.constant.ItemExtraConstants;
 import com.taobao.item.domain.ItemDO;
 import com.taobao.item.domain.ItemSkuDO;
+import com.taobao.item.domain.extra.AuctionExtraDO;
 import com.taobao.item.domain.extra.ItemExtraDO;
+import com.taobao.item.domain.extra.QueryItemExtraDO;
 import com.taobao.item.domain.extra.QueryItemExtraOption;
 import com.taobao.item.domain.extra.SkuExtraDO;
 import com.taobao.item.domain.result.ResultDO;
+import com.taobao.item.domain.result.ShelfResultDO;
 import com.taobao.item.exception.IcException;
 import com.taobao.item.service.client.ItemExtraServiceClient;
 import com.taobao.itemcenter.demo.utils.ItemUtils;
@@ -40,6 +44,9 @@ public class ItemExtraServiceClientDemo {
 		itemExtraDemo.queryItemExtra_查询商品扩展信息();
 		itemExtraDemo.deleteItemExtraInAllShop_卖家删除不同外店的宝贝();
 		itemExtraDemo.createItemExtra_创建一条新的扩展信息记录();
+		itemExtraDemo.sellerDownShelfItemExtra_卖家在外店下架商品();
+		itemExtraDemo.updateItemExtra_更新扩展信息();
+		itemExtraDemo.queryItemExtraForUpAndDownShelf_查询结果带宝贝信息();
 		System.exit(0);
 	}
 
@@ -93,8 +100,8 @@ public class ItemExtraServiceClientDemo {
 	 */
 	public void createItemExtra_创建一条新的扩展信息记录(){
 		//宝贝ID的值应该设置为当前商品库中存在的值，即该宝贝已经存在 
-		itemId=1602317157L;
-		userId=175757431;
+		itemId=1604251482;
+		userId=180280329;
 		printLine("createItemExtra接口调用");
 		//创建扩展信息对象，仅供参考
 		ItemExtraDO itemExtra = buildItemExtra(itemId,userId);
@@ -113,6 +120,95 @@ public class ItemExtraServiceClientDemo {
 		printLine("createItemExtra接口调用");
 	}
 	
+	/**
+	 * 卖家在外店下架商品
+	 */
+	public void sellerDownShelfItemExtra_卖家在外店下架商品(){
+		
+		userId=180280329;
+		itemId=1604251482;
+		type = ItemExtraConstants.TYPE_OPENEXTRASHOP;
+		List<Long> itemIdList = new ArrayList<Long>();
+		itemIdList.add(itemId);
+		printLine("sellerDownShelfItemExtra接口调用");
+		try {
+			ShelfResultDO result = itemExtraServiceClient.sellerDownShelfItemExtra(itemIdList, userId, type);
+			System.out.println(result);
+		} catch (IcException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		printLine("sellerDownShelfItemExtra接口调用");
+	}
+	
+	/**
+	 * 更新扩展信息字段
+	 */
+	public void updateItemExtra_更新扩展信息(){
+		printLine("updateItemExtra接口调用");
+		ItemExtraDO extraItem = getTestItemExtra();
+		if(null == extraItem){
+			System.out.println("测试的数据不存在，请重新设置获取扩展信息记录的字段！");
+			return;
+		}
+		String urlStr = "http://www.taobao.test.com/";	
+		//更新扩展信息的标题的图片地址
+		extraItem.setTitle("更新的扩展商品标题");
+		extraItem.setPicUrl(urlStr);
+		long curr = System.currentTimeMillis();
+		Date starts = new Date(curr+50000000L);
+		extraItem.setStarts(starts);
+		ResultDO<ItemExtraDO> result;
+		try {
+			result = itemExtraServiceClient.updateItemExtra(extraItem);
+			printResult(result);
+		} catch (IcException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		printLine("updateItemExtra接口调用");
+	}
+	
+	/**
+	 * 查询结果带宝贝信息
+	 * userId,type,status为必输字段
+	 */
+	public void queryItemExtraForUpAndDownShelf_查询结果带宝贝信息(){
+		printLine("queryItemExtraForUpAndDownShelf接口调用");
+		userId=180280329;
+		QueryItemExtraDO queryItemExtraDO =new QueryItemExtraDO();
+		queryItemExtraDO.setStatus(ItemExtraConstants.STATUS_DOWNSHELF);
+		queryItemExtraDO.setUserId(userId);
+		ResultDO<List<AuctionExtraDO>> result;
+		try {
+			result = itemExtraServiceClient.queryItemExtraForUpAndDownShelf(userId,queryItemExtraDO);
+			printResult(result);
+		} catch (IcException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		printLine("queryItemExtraForUpAndDownShelf接口调用");
+	}
+	
+	private ItemExtraDO getTestItemExtra() {
+		QueryItemExtraOption option = new QueryItemExtraOption(QueryItemExtraOption.SKUS);
+		userId = 0;
+		itemId = 1604251482;
+		type = ItemExtraConstants.TYPE_OPENEXTRASHOP;
+		try {
+			@SuppressWarnings("deprecation")
+			ResultDO<ItemExtraDO> result = itemExtraServiceClient
+					.queryItemExtra(itemId, type, userId, option);
+			if(result.isSuccess()){
+				return result.getModule();
+			}
+		} catch (IcException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
 	private ItemExtraDO buildItemExtra(long itemId2, long userId2) {
 		// TODO Auto-generated method stub
 		ItemDO item = ItemUtils.getSimpleItem(itemId2, true);
