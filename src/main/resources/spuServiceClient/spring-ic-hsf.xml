@@ -1,24 +1,43 @@
 <?xml version="1.0" encoding="GBK"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans default-autowire="byName">
-	<bean id="itemQueryServiceClient" name="itemQueryServiceClient"
-		class="com.taobao.item.service.client.ItemQueryServiceClient">
-		<property name="itemQueryService">
+	<bean id="spuServiceClient" name="spuServiceClient"
+		class="com.taobao.item.service.client.SpuServiceClient">
+		<!-- 根据自己需要确定配置的分组service，有疑问可以咨询IC同学 -->
+		<property name="spuService">
 			<bean class="com.taobao.hsfunit.app.spring.util.HSFSpringConsumerBean"
 				init-method="init">
 				<property name="interfaceName">
-					<value>com.taobao.item.service.ItemQueryService</value>
+					<value>com.taobao.item.service.SpuService</value>
 				</property>
 				<property name="version" value="1.0.0.daily"></property>
 			</bean>
 		</property>
-		<property name="itemQueryServiceL0">
+		<property name="spuServiceL0">
 			<bean class="com.taobao.hsfunit.app.spring.util.HSFSpringConsumerBean"
 				init-method="init">
 				<property name="interfaceName">
-					<value>com.taobao.item.service.ItemQueryService</value>
+					<value>com.taobao.item.service.SpuService</value>
 				</property>
 				<property name="version" value="1.0.0.daily-L0"></property>
+			</bean>
+		</property>
+		<property name="spuServiceL1">
+			<bean class="com.taobao.hsfunit.app.spring.util.HSFSpringConsumerBean"
+				init-method="init">
+				<property name="interfaceName">
+					<value>com.taobao.item.service.SpuService</value>
+				</property>
+				<property name="version" value="1.0.0.daily-L1"></property>
+			</bean>
+		</property>
+		<property name="spuServiceL2">
+			<bean class="com.taobao.hsfunit.app.spring.util.HSFSpringConsumerBean"
+				init-method="init">
+				<property name="interfaceName">
+					<value>com.taobao.item.service.SpuService</value>
+				</property>
+				<property name="version" value="1.0.0.daily-L2"></property>
 			</bean>
 		</property>
 	</bean>
