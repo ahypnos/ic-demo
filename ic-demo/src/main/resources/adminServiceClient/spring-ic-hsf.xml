@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName">
+	<bean id="adminServiceClient" name="adminService"
+		class="com.taobao.item.service.client.AdminServiceClient">
+		<property name="adminService">
+			<bean class="com.taobao.hsfunit.app.spring.util.HSFSpringConsumerBean"
+				init-method="init">
+				<property name="interfaceName">
+					<value>com.taobao.item.service.AdminService</value>
+				</property>
+				<property name="version" value="1.0.0.daily"></property>
+				<!-- <property name="methodSpecials">
+					<list>
+						<bean id="changeTimeoutForUpdateItemField" class="com.taobao.hsfunit.model.metadata.MethodSpecial">
+							<property name="methodName" value="xiaoerUpdateItemFields" />
+							<property name="clientTimeout" value="40" />
+						</bean>
+						<bean id="changeTimeoutForDownShelfBidItem" class="com.taobao.hsfunit.model.metadata.MethodSpecial">
+							<property name="methodName" value="cronAutoDownShelfBidItemSchedule" />
+							<property name="clientTimeout" value="60" />
+						</bean>
+					</list>
+				</property> -->
+			</bean>
+		</property>
+	</bean>
+</beans>
