@@ -48,21 +48,58 @@ public class ItemSnapServiceClientDemo {
 		return itemSnapServiceClient.updateGmtLastRefBySnapId(SAMPLE_PERSISTENT_SNAP_ID, new Date(), SAMPLE_PERSISTENT_ITEM_ID);
 	}
 
+	/**
+	 * 参见#insertItemSnap(ItemSnapDO itemSnapDO, long itemId,boolean istemp)
+	 * @param itemSnapDO
+	 * @param itemId
+	 * @return
+	 * @throws IcException
+	 */
 	public ResultDO<Long> insertItemSnap(ItemSnapDO itemSnapDO, long itemId)
 			throws IcException {
 		return null;
 	}
 
-	public ResultDO<Integer> updateEndsAndPrice(
-			ItemSnapUpdateDO itemSnapUpdateDO, long itemId) throws IcException {
-		return null;
+	public ResultDO<Integer> updateEndsAndPrice() throws IcException {
+		ResultDO<Integer> result = new ResultDO<Integer>();
+		ItemSnapUpdateDO itemSnapUpdateDO = new ItemSnapUpdateDO();
+		itemSnapUpdateDO.setSnapId(SAMPLE_PERSISTENT_SNAP_ID);
+		itemSnapUpdateDO.setClosed(true);
+		itemSnapUpdateDO.setGmtLastRef2Sysdate(true);
+		itemSnapUpdateDO.setCurrentBid(123.5);
+		itemSnapUpdateDO.setEnds(new Date());
+		itemSnapUpdateDO.setReservePrice(123.5);
+		result = itemSnapServiceClient.updateEndsAndPrice(itemSnapUpdateDO, SAMPLE_PERSISTENT_ITEM_ID);
+		return result;
 	}
 
-	public ResultDO<Long> insertItemSnap(ItemSnapDO itemSnapDO, long itemId,
-			boolean istemp) throws IcException {
-		return null;
+	/**
+	 * 插入一条快照
+	 * @param itemSnapDO
+	 * @param itemId
+	 * @param istemp
+	 * @return
+	 * @throws IcException
+	 */
+	public ResultDO<Long> insertItemSnap() throws IcException {
+		ResultDO<Long> result = new ResultDO<Long>();
+		result = itemSnapServiceClient.insertItemSnap(createItemSnapDO(), SAMPLE_TEMP_ITEM_ID, true);
+		return result;
 	}
 
+	private ItemSnapDO createItemSnapDO(){
+		ItemSnapDO snap = new ItemSnapDO();
+		snap.setIncrementNum(99.9);
+		snap.setHaveInvoice(0);
+		snap.setHaveGuarantee(0);
+		snap.setStuffStatus(5);
+		snap.setApproveStatus(0);
+		snap.setPromotedStatus(1);
+		snap.setRepostTimes(0);
+		snap.setSecureTradeAgree(1);
+		return snap;
+	}
+	
 	public ResultDO<Integer> updateRepostTimesBySnapId(long snapId,
 			int repostTimes, long itemId) throws IcException {
 		return itemSnapServiceClient.updateRepostTimesBySnapId(SAMPLE_PERSISTENT_SNAP_ID, -1, SAMPLE_PERSISTENT_ITEM_ID);
@@ -87,11 +124,12 @@ public class ItemSnapServiceClientDemo {
 		ItemSnapServiceClientDemo itemSnapServiceClientDemo = (ItemSnapServiceClientDemo) ac
 				.getBean("itemSnapServiceClientDemo");
 
-		try {
-			System.out.println(itemSnapServiceClientDemo.queryItemSnapBySnapId(0L, 0L));
-		} catch (IcException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		//具体调用不列出
+//		try {
+//			System.out.println(itemSnapServiceClientDemo.queryItemSnapBySnapId(0L, 0L));
+//		} catch (IcException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 	}
 }
