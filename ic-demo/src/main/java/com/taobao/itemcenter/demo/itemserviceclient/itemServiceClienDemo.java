@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 import junit.framework.Assert;
 
@@ -39,7 +38,6 @@ import com.taobao.item.domain.result.ShelfResultDO;
 import com.taobao.item.domain.spu.FeatureDO;
 import com.taobao.item.exception.IcException;
 import com.taobao.item.service.ItemService;
-import com.taobao.item.service.client.ItemQueryServiceClient;
 import com.taobao.item.service.client.ItemServiceClient;
 import com.taobao.item.util.StringUtils;
 import com.taobao.itemcenter.demo.itemqueryserviceclient.ItemQueryServiceClientDemo;
@@ -50,28 +48,44 @@ import com.taobao.itemcenter.demo.utils.UserDataConstants;
 public class itemServiceClienDemo {
 
 	private Log log = LoggerFactory.getLogger(this.getClass());
+	private List<Long> itemIdList = new ArrayList<Long>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 4576510935105518152L;
+        {
+			add(1500003118097L);
+		}
+	};
+	private long itemId = 1500003118097L;
 
+	private long sellerId = 77888896L;
+	private long userId = 77888896L;
 	private ItemServiceClient itemServiceClient;
-
 	/**
 	 * 添加商品相关信息
 	 * 
 	 */
 	public void addItemOptions() {
-		long itemId = 1500002989095L;
+
+		System.out
+				.println("----------------调用addItemOptions()函数------------------------------");
 		List<Long> options = new ArrayList<Long>();
 		options.add(1L);// 给宝贝添加 参与会员打折的 属性
-		options.add(10L);// 给宝贝添加 是商城宝贝的 属性
+		options.add(1L << 3);// 给宝贝添加 是商城宝贝的 属性
 		try {
 			ProcessResultDO result = itemServiceClient.addItemOptions(itemId,
 					options, getLoomAppInfo());
 			if (result.isSuccess()) {
 
+				System.out
+						.println("----------------调用addItemOptions()函数成功------得到商品信息--"
+								+ result.getResultCode());
+
 				// do something
 			} else {
 				// 打印错误信息
-				System.out
-						.println("----------------------------------------------");
+
 				log.error(result.getErrorMessages());
 				System.out
 						.println("----------------------------------------------");
@@ -88,7 +102,6 @@ public class itemServiceClienDemo {
 	 * 
 	 */
 	public void removeItemOptions() {
-		long itemId = 1500002989095L;
 		List<Long> options = new ArrayList<Long>();
 		options.add(1L);// 去除宝贝 参与会员打折的 属性
 		options.add(10L);// 去除宝贝 是商城宝贝的 属性
@@ -121,27 +134,30 @@ public class itemServiceClienDemo {
 	public void publishItem() {
 
 		try {
-			ItemDO item = ItemUtils.createItemDO(UserDataConstants.B_商家L);
+			ItemDO item = ItemUtils.createItemDO(UserDataConstants.C_五星c卖家L);
 			// item.setXXX(); 添加商品的一系列属性 相关信息条件请参考API文档
-			item.setTitle("美腿丝袜诱惑- -");
 			item.setCategoryId(IcDemoConstants.ITEM_CATEGORY_FOOD);
+			item.setProperty("1930001:27772");
 			item.setSpuId(0L);
+			item.setQuantity(1);
 			item.setAuctionPoint(5);
+			
+			
+			
 
 			// 发布商品时，杂七杂八但又需要的数据往这里加，比如发布时的用户ip,此次发布是否需要预览，是否返回SPU信息等等
-			PublishItemOptionDO publicItemOption = new PublishItemOptionDO();
+			PublishItemOptionDO publicItemOption=ItemUtils.createPublishItemOptionDO();
 			publicItemOption.setLang("zh_CN"); // 违规关键字校验的客服端语言，此处设置为简体中文，zh_HK繁体中文，
-
-			CreateItemResultDO result = itemServiceClient.publishItem(item,
-					publicItemOption, getLoomAppInfo());
+            CreateItemResultDO result = itemServiceClient.publishItem(item,
+					publicItemOption, getAppInfoDOForSell());
 			if (result.isSuccess()) {
-              
+
 				// do something
 			} else {
 				// 打印错误信息
 				System.out
 						.println("----------------------------------------------");
-				log.error(result.getContext());
+				log.error(result.getErrorStr());
 				System.out
 						.println("----------------------------------------------");
 				// do something
@@ -160,15 +176,16 @@ public class itemServiceClienDemo {
 	public void publishItemPreview() {
 
 		try {
-			ItemDO item = ItemUtils.createItemDO(UserDataConstants.B_商家L);
+			ItemDO item = ItemUtils.createItemDO(UserDataConstants.C_五星c卖家L);
 			// item.setXXX(); 添加商品的一系列属性 相关信息条件请参考API文档
-			item.setTitle("美腿丝袜诱惑- -");
 			item.setCategoryId(IcDemoConstants.ITEM_CATEGORY_FOOD);
+			item.setProperty("1930001:27772");
 			item.setSpuId(0L);
+			item.setQuantity(1);
 			item.setAuctionPoint(5);
-
+			
 			// 发布商品时，杂七杂八但又需要的数据往这里加，比如发布时的用户ip,此次发布是否需要预览，是否返回SPU信息等等
-			PublishItemOptionDO publicItemOption = new PublishItemOptionDO();
+			PublishItemOptionDO publicItemOption = ItemUtils.createPublishItemOptionDO();
 			publicItemOption.setLang("zh_CN"); // 违规关键字校验的客服端语言，此处设置为简体中文，zh_HK繁体中文，
 
 			CreateItemResultDO result = itemServiceClient.publishItemPreview(
@@ -202,7 +219,6 @@ public class itemServiceClienDemo {
 		try {
 			ItemDO item = ItemUtils.createItemDO(UserDataConstants.B_商家L);
 			// item.setXXX(); 添加商品的一系列属性 相关信息条件请参考API文档
-			item.setTitle("美腿丝袜诱惑- -");
 			item.setCategoryId(IcDemoConstants.ITEM_CATEGORY_FOOD);
 			item.setSpuId(0L);
 			item.setAuctionPoint(5);
@@ -256,7 +272,8 @@ public class itemServiceClienDemo {
 					.publishNumberRangeItem(item, number, publicItemOption,
 							getLoomAppInfo());
 			if (result.isSuccess()) {
-
+				System.out
+				.println("-------------------------发布数码宝贝成功---------------------"+result.getItem());
 				// do something
 			} else {
 				// 打印错误信息
@@ -1258,7 +1275,7 @@ public class itemServiceClienDemo {
 			long sellerId = UserDataConstants.C_多图用户L;
 			long itemId = 1L;
 			ItemImageDO itemImage = ItemUtils.createItemImageDO(sellerId,
-					itemId, 1);
+					itemId, 1, false);
 			itemImage.setMajor(false);
 
 			ResultDO<ItemImageDO> result = itemServiceClient
@@ -1554,9 +1571,8 @@ public class itemServiceClienDemo {
 		}
 	}
 
-	
 	/**
-	 *创建宝贝sku分仓
+	 * 创建宝贝sku分仓
 	 * 
 	 * @see ItemService#sellerCreateSkuStore(long, SkuStoreDO , AppInfoDO)
 	 * 
@@ -1566,10 +1582,10 @@ public class itemServiceClienDemo {
 
 		try {
 
-			
-			long sellerId=1l;
-			SkuStoreDO skuStore=new SkuStoreDO();
-			BaseResultDO result = itemServiceClient.sellerCreateSkuStore(sellerId, skuStore, getLoomAppInfo());
+			long sellerId = 1l;
+			SkuStoreDO skuStore = new SkuStoreDO();
+			BaseResultDO result = itemServiceClient.sellerCreateSkuStore(
+					sellerId, skuStore, getLoomAppInfo());
 
 			if (result.isSuccess()) {
 
@@ -1588,13 +1604,12 @@ public class itemServiceClienDemo {
 			e.printStackTrace();
 		}
 	}
-	
-	
-	
+
 	/**
-	 *创建宝贝分仓
+	 * 创建宝贝分仓
 	 * 
-	 * @see ItemService#sellerCreateAuctionStore(long, AuctionStoreDO , AppInfoDO)
+	 * @see ItemService#sellerCreateAuctionStore(long, AuctionStoreDO ,
+	 *      AppInfoDO)
 	 * 
 	 * @deprecated
 	 */
@@ -1602,10 +1617,10 @@ public class itemServiceClienDemo {
 
 		try {
 
-			
-			long sellerId=1l;
-			 AuctionStoreDO autionStore=new  AuctionStoreDO();
-			BaseResultDO result = itemServiceClient.sellerCreateAuctionStore(sellerId, autionStore, getLoomAppInfo());
+			long sellerId = 1l;
+			AuctionStoreDO autionStore = new AuctionStoreDO();
+			BaseResultDO result = itemServiceClient.sellerCreateAuctionStore(
+					sellerId, autionStore, getLoomAppInfo());
 
 			if (result.isSuccess()) {
 
@@ -1624,9 +1639,9 @@ public class itemServiceClienDemo {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
-	 *删除宝贝分仓
+	 * 删除宝贝分仓
 	 * 
 	 * @see ItemService#sellerDeleteAuctionStore(long,List , AppInfoDO)
 	 * 
@@ -1636,10 +1651,10 @@ public class itemServiceClienDemo {
 
 		try {
 
-			
-			long sellerId=1l;
-			List<AuctionStoreIdDO> autionStore=new  ArrayList<AuctionStoreIdDO>();
-			BaseResultDO result = itemServiceClient.sellerDeleteAuctionStore(sellerId,  autionStore, getLoomAppInfo());
+			long sellerId = 1l;
+			List<AuctionStoreIdDO> autionStore = new ArrayList<AuctionStoreIdDO>();
+			BaseResultDO result = itemServiceClient.sellerDeleteAuctionStore(
+					sellerId, autionStore, getLoomAppInfo());
 
 			if (result.isSuccess()) {
 
@@ -1658,29 +1673,34 @@ public class itemServiceClienDemo {
 			e.printStackTrace();
 		}
 	}
-	
-	
+
 	/**
 	 * 全量同步宝贝分仓库存
 	 * 
-	 * @see ItemService#sellerModifyAuctionStoreQuantity(long,Map,Integer>,AppInfoDO)
+	 * @see 
+	 *      ItemService#sellerModifyAuctionStoreQuantity(long,Map,Integer>,AppInfoDO
+	 *      )
 	 * 
 	 * @deprecated
 	 */
 	public void sellerModifyAuctionStoreQuantity() {
-		//批量更新宝贝多个分仓quantity
+		// 批量更新宝贝多个分仓quantity
 
 		try {
-			 long sellerId =UserDataConstants.C_普通c卖家L;
+			long sellerId = UserDataConstants.C_普通c卖家L;
 
-			 Map<AuctionStoreIdDO,Integer> auctionStoreQuantityMap = new HashMap<AuctionStoreIdDO,Integer>();
-			 Long itemId=1L;
-			 AuctionStoreDO auctionStore2 = createAuctionStore(itemId,"STORE_yulinTestStore02",0,2,sellerId);
-			 AuctionStoreIdDO auctionStoreIdDO2 =  new AuctionStoreIdDO(auctionStore2.getAuctionId(),auctionStore2.getSkuId(),auctionStore2.getStoreCode());
-             auctionStoreQuantityMap.put(auctionStoreIdDO2, 8);
-			 
-		    BatchResultDO<AuctionStoreIdDO>  result = 
-		    		itemServiceClient.sellerModifyAuctionStoreQuantity(sellerId,auctionStoreQuantityMap,getUnknowAppInfo() );
+			Map<AuctionStoreIdDO, Integer> auctionStoreQuantityMap = new HashMap<AuctionStoreIdDO, Integer>();
+			Long itemId = 1L;
+			AuctionStoreDO auctionStore2 = createAuctionStore(itemId,
+					"STORE_yulinTestStore02", 0, 2, sellerId);
+			AuctionStoreIdDO auctionStoreIdDO2 = new AuctionStoreIdDO(
+					auctionStore2.getAuctionId(), auctionStore2.getSkuId(),
+					auctionStore2.getStoreCode());
+			auctionStoreQuantityMap.put(auctionStoreIdDO2, 8);
+
+			BatchResultDO<AuctionStoreIdDO> result = itemServiceClient
+					.sellerModifyAuctionStoreQuantity(sellerId,
+							auctionStoreQuantityMap, getUnknowAppInfo());
 
 			if (result.isSuccess()) {
 
@@ -1699,22 +1719,20 @@ public class itemServiceClienDemo {
 			e.printStackTrace();
 		}
 	}
-	
-	public itemServiceClienDemo(){
-		
+
+	public itemServiceClienDemo() {
 
 		String[] location = { "itemServiceClient/spring-ic-hsf.xml" };
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				location);
 		itemServiceClient = (ItemServiceClient) context
 				.getBean("itemServiceClient");
-		
-		
+
 	}
-	
+
 	public static void main(String[] arg) {
 
-		new itemServiceClienDemo().publishItem();
+		new itemServiceClienDemo().publishNumberRangeItem();
 
 	}
 
@@ -1798,15 +1816,16 @@ public class itemServiceClienDemo {
 		feature.setValue(value);
 		return feature;
 	}
-	private static AuctionStoreDO createAuctionStore(Long auctionId, String storeCode, int status,int quantity,long sellerId)
-	{
+
+	private static AuctionStoreDO createAuctionStore(Long auctionId,
+			String storeCode, int status, int quantity, long sellerId) {
 		AuctionStoreDO auctionStore = new AuctionStoreDO();
 		auctionStore.setAuctionId(auctionId);
 		auctionStore.setSellerId(sellerId);
 		auctionStore.setStatus(status);
 		auctionStore.setStoreCode(storeCode);
 		auctionStore.setQuantity(quantity);
-		
-		return auctionStore;		
+
+		return auctionStore;
 	}
 }

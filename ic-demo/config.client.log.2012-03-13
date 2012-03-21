@@ -1,0 +1,792 @@
+2012-03-13 09:05:12,790 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:05:12,946 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:05:12,946 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:05:12,993 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:05:13,040 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:05:13,040 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:05:13,071 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:05:13,071 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:05:13,071 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:05:13,071 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.8:9600?priority=0...
+2012-03-13 09:05:13,087 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF (1 pending notifications)
+2012-03-13 09:05:13,087 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 09:05:13,087 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:05:13,087 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:05:13,087 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:05:13,415 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.8:9600?priority=0
+2012-03-13 09:05:13,900 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:05:13,900 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:05:13,915 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:05:13,915 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:05:13,915 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:05:13,915 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:05:14,915 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:05:14,915 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:05:15,009 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:05:15,009 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 09:05:15,009 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:05:15,009 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:05:15,009 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:05:15,009 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:05:15,009 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 09:05:15,009 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:05:15,009 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:06:13,522 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:06:13,538 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:06:13,600 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:06:13,600 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:06:13,632 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:06:13,632 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:06:13,632 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:06:13,647 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:06:13,647 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:06:13,647 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:06:13,647 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:06:13,647 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:06:13,647 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:06:13,663 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.9:9600?priority=0...
+2012-03-13 09:06:13,663 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:06:13,663 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:06:13,835 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.9:9600?priority=0
+2012-03-13 09:06:13,913 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:06:13,913 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:06:13,991 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:06:13,991 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:06:13,991 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:06:13,991 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:06:14,928 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:06:14,928 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:06:15,022 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:06:15,022 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 09:06:15,022 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:06:15,022 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:06:15,022 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:06:15,022 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:06:15,022 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 09:06:15,022 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:06:15,022 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:08:21,220 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:08:21,220 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:08:21,252 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:08:21,252 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:08:21,252 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:08:21,267 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:08:21,267 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:08:21,267 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:08:21,267 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:08:21,267 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:08:21,267 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.9:9600?priority=0...
+2012-03-13 09:08:21,267 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:08:21,267 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:08:21,283 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF (2 pending notifications)
+2012-03-13 09:08:21,283 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:08:21,283 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:08:21,392 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.9:9600?priority=0
+2012-03-13 09:08:21,424 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:08:21,424 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:08:21,439 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:08:21,439 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:08:21,439 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:08:21,439 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:08:22,486 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:08:22,486 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:08:22,486 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:08:22,486 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:08:22,486 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:08:22,486 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:08:22,486 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:08:22,486 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:08:22,486 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 09:08:22,486 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:08:22,486 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:08:47,032 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:08:47,032 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:08:47,063 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:08:47,063 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:08:47,079 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:08:47,079 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:08:47,079 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:08:47,079 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:08:47,079 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:08:47,079 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:08:47,094 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:08:47,094 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:08:47,094 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:08:47,094 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.9:9600?priority=0...
+2012-03-13 09:08:47,094 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:08:47,094 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:08:47,204 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.9:9600?priority=0
+2012-03-13 09:08:47,251 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:08:47,251 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:08:47,251 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:08:47,251 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:08:47,251 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:08:47,251 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:08:48,344 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:08:48,344 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:08:48,344 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:08:48,344 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:08:48,344 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:08:48,344 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:08:48,344 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:08:48,344 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:08:48,344 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 09:08:48,344 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:08:48,344 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:09:32,093 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:09:32,093 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:09:32,124 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:09:32,124 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:09:32,124 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:09:32,140 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:09:32,140 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:09:32,140 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:09:32,140 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:09:32,140 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:09:32,140 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.9:9600?priority=0...
+2012-03-13 09:09:32,140 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:09:32,140 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:09:32,155 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:09:32,155 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:09:32,155 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:09:32,265 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.9:9600?priority=0
+2012-03-13 09:09:32,296 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:09:32,296 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:09:32,311 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:09:32,311 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:09:32,311 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:09:32,311 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:09:33,374 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:09:33,374 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:09:33,374 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:09:33,374 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:09:33,374 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:09:33,374 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:09:33,374 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:09:33,374 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:09:33,374 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 09:09:33,374 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:09:33,374 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:10:46,527 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:10:46,527 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:10:46,559 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:10:46,559 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:10:46,574 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:10:46,574 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:10:46,574 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:10:46,574 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:10:46,574 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:10:46,574 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:10:46,590 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:10:46,590 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:10:46,590 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:10:46,590 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.9:9600?priority=0...
+2012-03-13 09:10:46,590 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:10:46,590 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:10:46,699 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.9:9600?priority=0
+2012-03-13 09:10:46,730 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:10:46,746 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:10:46,746 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:10:46,746 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:10:46,746 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:10:46,746 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:10:47,777 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:10:47,777 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 09:10:47,777 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:10:47,777 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:10:47,777 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:10:47,777 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:10:47,777 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:10:47,777 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:10:47,777 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:10:47,777 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 09:10:47,777 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:12:45,992 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:12:46,007 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:12:46,038 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:12:46,038 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:12:46,038 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:12:46,054 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:12:46,054 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:12:46,054 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:12:46,054 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:12:46,054 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:12:46,054 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:12:46,054 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:12:46,054 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:12:46,070 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:12:46,070 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:12:46,070 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.9:9600?priority=0...
+2012-03-13 09:12:46,195 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.9:9600?priority=0
+2012-03-13 09:12:46,226 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:12:46,226 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:12:46,242 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:12:46,242 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:12:46,242 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:12:46,242 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:12:47,273 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:12:47,273 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:12:47,273 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:12:47,273 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:12:47,273 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:12:47,273 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:12:47,273 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:12:47,273 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (2 pending notifications)
+2012-03-13 09:12:47,273 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:12:47,273 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF (1 pending notifications)
+2012-03-13 09:12:47,273 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 09:13:26,052 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:13:26,052 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:13:26,099 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:13:26,099 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:13:26,099 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:13:26,115 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:13:26,115 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.1 for com.taobao.item.service.AdminService:1.0.0.daily) in group HSF
+2012-03-13 09:13:26,115 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:13:26,115 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:13:26,115 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:13:26,115 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.9:9600?priority=0...
+2012-03-13 09:13:26,131 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:13:26,131 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:13:26,131 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:13:26,240 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.9:9600?priority=0
+2012-03-13 09:13:26,287 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.1 for com.taobao.item.service.AdminService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:13:26,287 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:13:26,302 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:13:26,302 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:13:27,349 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE, Revision: 1, Empty)
+2012-03-13 09:13:27,349 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:13:27,349 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:13:27,349 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 09:13:27,349 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:13:27,349 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.AdminService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:13:27,349 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.1 for com.taobao.item.service.AdminService:1.0.0.daily) in group HSF
+2012-03-13 09:14:12,082 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:14:12,082 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:14:12,113 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:14:12,129 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:14:12,129 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:14:12,144 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:14:12,144 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.1 for com.taobao.item.service.AdminService:1.0.0.daily) in group HSF
+2012-03-13 09:14:12,144 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:14:12,144 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:14:12,144 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:14:12,144 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.8:9600?priority=0...
+2012-03-13 09:14:12,144 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:14:12,144 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:14:12,144 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:14:12,269 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.8:9600?priority=0
+2012-03-13 09:14:12,301 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.1 for com.taobao.item.service.AdminService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:14:12,301 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:14:12,316 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:14:12,316 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:14:13,316 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE, Revision: 1, Empty)
+2012-03-13 09:14:13,332 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:14:13,332 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:14:13,332 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 09:14:13,332 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:14:13,332 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.AdminService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:14:13,332 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.1 for com.taobao.item.service.AdminService:1.0.0.daily) in group HSF
+2012-03-13 09:15:23,923 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:15:23,923 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:15:23,954 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:15:23,954 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:15:23,970 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:15:23,970 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:15:23,970 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.1 for com.taobao.item.service.AdminService:1.0.0.daily) in group HSF
+2012-03-13 09:15:23,970 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:15:23,970 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:15:23,970 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:15:23,985 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.8:9600?priority=0...
+2012-03-13 09:15:23,985 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:15:23,985 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:15:23,985 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:15:24,095 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.8:9600?priority=0
+2012-03-13 09:15:24,142 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.1 for com.taobao.item.service.AdminService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:15:24,142 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:15:24,142 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:15:24,142 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:15:25,220 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE, Revision: 1, Empty)
+2012-03-13 09:15:25,220 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.AdminService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:15:25,235 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:15:25,235 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 09:15:25,235 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:15:25,235 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.AdminService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:15:25,235 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.AdminService:1.0.0.daily.1 for com.taobao.item.service.AdminService:1.0.0.daily) in group HSF
+2012-03-13 09:20:41,614 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:20:41,614 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:20:41,645 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:20:41,645 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:20:41,661 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:20:41,661 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:20:41,661 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:20:41,661 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:20:41,661 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:20:41,661 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:20:41,676 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:20:41,676 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:20:41,676 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:20:41,676 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.9:9600?priority=0...
+2012-03-13 09:20:41,676 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:20:41,676 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:20:41,786 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.9:9600?priority=0
+2012-03-13 09:20:41,817 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:20:41,817 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:20:41,880 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:20:41,880 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:20:41,880 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:20:41,880 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:20:42,895 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:20:42,895 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:20:42,911 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:20:42,911 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 09:20:42,911 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:20:42,926 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:20:42,926 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:20:42,942 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:20:42,942 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:20:43,129 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:20:43,129 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 09:24:02,528 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:24:02,528 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:24:02,559 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:24:02,559 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:24:02,559 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:24:02,575 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:24:02,575 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:24:02,575 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:24:02,575 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:24:02,575 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:24:02,575 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.9:9600?priority=0...
+2012-03-13 09:24:02,591 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:24:02,591 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:24:02,591 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:24:02,591 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 09:24:02,591 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:24:02,700 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.9:9600?priority=0
+2012-03-13 09:24:02,747 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:24:02,747 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:24:02,747 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:24:02,747 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:24:02,747 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:24:02,747 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:24:03,809 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:24:03,809 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:24:03,809 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:24:03,809 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:24:03,809 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:24:03,809 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:24:03,809 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:24:03,809 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:24:03,809 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 09:24:03,809 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:24:03,809 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:24:44,667 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:24:44,667 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:24:44,698 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:24:44,714 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:24:44,714 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:24:44,730 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:24:44,730 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:24:44,730 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:24:44,730 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:24:44,730 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:24:44,730 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.9:9600?priority=0...
+2012-03-13 09:24:44,730 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:24:44,730 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:24:44,730 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF (2 pending notifications)
+2012-03-13 09:24:44,745 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:24:44,745 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:24:44,855 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.9:9600?priority=0
+2012-03-13 09:24:44,901 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:24:44,901 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:24:44,901 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:24:44,901 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:24:44,901 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:24:44,901 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:24:45,901 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:24:45,901 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:24:45,995 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:24:45,995 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:24:45,995 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:24:45,995 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 09:24:45,995 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:24:45,995 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:24:46,917 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:24:46,917 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 09:24:46,917 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:29:13,313 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:29:13,313 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:29:13,360 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:29:13,360 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:29:13,360 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:29:13,375 INFO  ConfigClientWorker-Default       - [Notifier] Notifier thread is starting...
+2012-03-13 09:29:13,375 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF (2 pending notifications)
+2012-03-13 09:29:13,375 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:29:13,391 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF (1 pending notifications)
+2012-03-13 09:29:13,391 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:29:13,391 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 09:29:13,391 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:29:13,391 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:29:13,391 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:29:13,391 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:29:13,391 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.8:9600?priority=0...
+2012-03-13 09:29:13,516 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.8:9600?priority=0
+2012-03-13 09:29:13,547 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:29:13,547 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:29:13,563 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:29:13,563 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:29:13,563 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:29:13,563 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:29:14,563 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:29:14,579 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:29:14,579 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:29:14,579 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:29:14,579 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:29:14,579 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:29:14,579 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:29:14,579 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:29:14,579 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:29:14,579 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:29:14,579 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:31:43,979 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:31:43,979 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:31:44,010 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:31:44,010 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:31:44,026 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:31:44,026 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:31:44,026 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:31:44,042 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:31:44,042 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:31:44,042 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:31:44,042 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:31:44,042 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:31:44,057 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.8:9600?priority=0...
+2012-03-13 09:31:44,057 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:31:44,057 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 09:31:44,057 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:31:44,167 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.8:9600?priority=0
+2012-03-13 09:31:44,213 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:31:44,213 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:31:44,229 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:31:44,229 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:31:44,229 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:31:44,229 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:31:45,229 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:31:45,229 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:31:45,323 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:31:45,323 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:31:45,323 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:31:45,323 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 09:31:45,323 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:31:45,323 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:31:45,323 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:31:45,323 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:31:45,338 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 09:32:25,431 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:32:25,431 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:32:25,462 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:32:25,477 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:32:25,477 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:32:25,493 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:32:25,493 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:32:25,493 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:32:25,493 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:32:25,493 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.8:9600?priority=0...
+2012-03-13 09:32:25,493 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:32:25,493 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:32:25,493 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:32:25,509 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:32:25,509 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 09:32:25,509 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:32:25,618 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.8:9600?priority=0
+2012-03-13 09:32:25,665 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:32:25,665 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:32:25,665 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:32:25,665 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:32:25,665 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:32:25,665 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:32:26,681 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:32:26,696 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 09:32:26,696 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:32:26,696 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:32:26,696 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:32:26,696 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:32:26,696 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:32:26,696 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:32:26,696 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:32:26,696 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:32:26,696 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:33:22,600 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:33:22,600 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:33:22,647 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:33:22,647 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:33:22,647 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:33:22,663 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:33:22,663 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF (1 pending notifications)
+2012-03-13 09:33:22,663 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:33:22,663 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:33:22,663 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:33:22,663 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:33:22,678 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.9:9600?priority=0...
+2012-03-13 09:33:22,678 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (2 pending notifications)
+2012-03-13 09:33:22,678 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:33:22,678 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:33:22,678 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:33:22,803 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.9:9600?priority=0
+2012-03-13 09:33:22,835 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:33:22,850 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:33:22,850 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:33:22,850 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:33:22,850 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:33:22,850 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:33:23,944 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:33:23,944 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 09:33:23,944 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:33:23,944 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:33:23,944 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:33:23,944 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:33:23,944 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:33:23,944 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:33:23,944 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:33:23,944 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 09:33:23,944 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:35:20,049 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:35:20,049 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:35:20,080 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:35:20,080 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:35:20,096 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:35:20,096 INFO  ConfigClientWorker-Default       - [Notifier] Notifier thread is starting...
+2012-03-13 09:35:20,096 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 09:35:20,096 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:35:20,096 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:35:20,096 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:35:20,111 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:35:20,111 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF (1 pending notifications)
+2012-03-13 09:35:20,111 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.8:9600?priority=0...
+2012-03-13 09:35:20,111 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:35:20,127 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:35:20,127 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:35:20,236 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.8:9600?priority=0
+2012-03-13 09:35:20,268 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:35:20,268 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:35:20,283 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:35:20,283 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:35:20,283 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:35:20,283 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:35:21,377 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:35:21,377 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:35:21,377 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:35:21,377 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:35:21,377 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:35:21,377 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:35:21,377 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:35:21,377 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:35:21,377 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:35:21,377 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:35:21,377 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:35:58,829 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:35:58,829 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:35:58,860 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:35:58,860 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:35:58,876 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:35:58,876 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:35:58,876 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:35:58,891 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:35:58,891 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:35:58,891 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:35:58,891 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:35:58,891 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.8:9600?priority=0...
+2012-03-13 09:35:58,907 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:35:58,907 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF (2 pending notifications)
+2012-03-13 09:35:58,907 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:35:58,907 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:35:59,032 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.8:9600?priority=0
+2012-03-13 09:35:59,063 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:35:59,063 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:35:59,079 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:35:59,079 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:35:59,079 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:35:59,079 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:36:00,110 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:36:00,110 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:36:00,110 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 09:36:00,110 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:36:00,110 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:36:00,110 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:36:00,110 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:36:00,110 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:36:00,110 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 09:36:00,110 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:36:00,125 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:40:58,973 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:40:58,973 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:40:59,005 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:40:59,020 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:40:59,020 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:40:59,036 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:40:59,036 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF (1 pending notifications)
+2012-03-13 09:40:59,036 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:40:59,036 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:40:59,036 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:40:59,036 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF (1 pending notifications)
+2012-03-13 09:40:59,036 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.8:9600?priority=0...
+2012-03-13 09:40:59,052 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 09:40:59,052 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:40:59,052 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:40:59,052 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:40:59,177 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.8:9600?priority=0
+2012-03-13 09:40:59,223 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:40:59,223 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:40:59,239 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:40:59,239 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:40:59,239 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:40:59,239 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:41:00,317 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:41:00,317 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:41:00,317 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:41:00,317 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:41:00,317 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:41:00,317 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:41:00,317 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 09:41:00,317 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:41:00,317 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:41:00,317 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF (1 pending notifications)
+2012-03-13 09:41:00,317 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 09:42:26,845 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 09:42:26,845 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 09:42:27,095 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 09:42:27,095 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 09:42:27,095 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 09:42:27,111 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 09:42:27,111 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:42:27,111 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 09:42:27,111 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 09:42:27,111 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 09:42:27,126 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.9:9600?priority=0...
+2012-03-13 09:42:27,126 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:42:27,126 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:42:27,126 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:42:27,126 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 09:42:27,126 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 09:42:27,251 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.9:9600?priority=0
+2012-03-13 09:42:27,283 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 09:42:27,283 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 09:42:27,298 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 09:42:27,298 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:42:27,298 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 09:42:27,298 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 09:42:28,361 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 09:42:28,361 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.1 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 09:42:28,376 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 09:42:28,376 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 09:42:28,376 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 09:42:28,376 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 09:42:28,376 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.114:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 09:42:28,376 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) (1 pending notifications)
+2012-03-13 09:42:28,376 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 09:42:28,376 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF (1 pending notifications)
+2012-03-13 09:42:28,376 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 18:56:23,707 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 18:56:23,707 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 18:56:23,942 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 18:56:23,957 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 18:56:24,004 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 18:56:24,004 INFO  main                             - [Cache] 2 expired entries purged.
+2012-03-13 18:56:24,082 INFO  ConfigClientWorker-Default       - [Notifier] Notifier thread is starting...
+2012-03-13 18:56:24,082 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 18:56:24,082 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 18:56:24,082 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 18:56:24,082 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 18:56:24,082 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 18:56:24,082 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.8:9600?priority=0...
+2012-03-13 18:56:24,582 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.8:9600?priority=0
+2012-03-13 18:56:24,691 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemService:1.0.0.daily.1 for com.taobao.item.service.ItemService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 18:56:24,691 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 18:56:24,723 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 18:56:24,723 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemService:1.0.0.daily.ROUTING.RULE.1 for com.taobao.item.service.ItemService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 18:56:25,707 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.113:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 18:56:25,707 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemService:1.0.0.daily.1 for com.taobao.item.service.ItemService:1.0.0.daily) in group HSF
+2012-03-13 18:56:25,785 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 18:56:25,785 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 18:56:25,785 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 18:56:25,801 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemService:1.0.0.daily.ROUTING.RULE, Revision: 1, Empty)
+2012-03-13 18:56:25,801 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemService:1.0.0.daily.ROUTING.RULE.1 for com.taobao.item.service.ItemService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 18:56:25,816 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 18:56:25,816 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 18:56:25,816 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 18:56:25,816 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 18:56:25,816 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 18:56:25,816 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 18:56:25,816 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 18:56:25,816 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 18:56:26,910 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.113:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 18:56:26,910 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 18:56:26,910 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 18:56:26,910 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 18:56:26,910 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.113:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 18:56:26,910 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 18:56:26,926 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 18:56:26,926 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 18:58:20,219 INFO  main                             - [Global] Logger is initialized.
+2012-03-13 18:58:20,219 INFO  main                             - [Global] Logger is attached to the folder of root file appender.
+2012-03-13 18:58:20,250 INFO  ConfigClientWorker-Default       - [Global] Deliverer thread is starting...
+2012-03-13 18:58:20,266 INFO  ConfigClientWorker-Default       - [Global] Connecting to servers...
+2012-03-13 18:58:20,266 INFO  main                             - [Global] Persistent cache is loaded successfully. (9 entries)
+2012-03-13 18:58:20,282 INFO  main                             - [Notifier] Notifier thread is starting...
+2012-03-13 18:58:20,282 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemService:1.0.0.daily.1 for com.taobao.item.service.ItemService:1.0.0.daily) in group HSF
+2012-03-13 18:58:20,282 INFO  ConfigClientWorker-Default       - [Cluster] Server list is updated. (2 servers)
+2012-03-13 18:58:20,282 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 18:58:20,282 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 18:58:20,282 INFO  ConfigClientWorker-Default       - [Cluster] Server 1: 10.232.16.8:9600?priority=0
+2012-03-13 18:58:20,282 INFO  ConfigClientWorker-Default       - [Cluster] Server 2: 10.232.16.9:9600?priority=0
+2012-03-13 18:58:20,282 INFO  ConfigClientWorker-Default       - [Global] Connecting to 10.232.16.9:9600?priority=0...
+2012-03-13 18:58:20,313 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 18:58:20,360 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF (1 pending notifications)
+2012-03-13 18:58:20,360 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 18:58:20,360 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF (1 pending notifications)
+2012-03-13 18:58:20,360 INFO  ConfigClientNotifier             - [Notifier] Notify Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 18:58:20,453 INFO  ConfigClientWorker-Default       - [Global] Successfully connected to server: 10.232.16.9:9600?priority=0
+2012-03-13 18:58:20,485 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemService:1.0.0.daily.1 for com.taobao.item.service.ItemService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 18:58:20,485 INFO  ConfigClientWorker-Default       - [Message] ClientInformationElement packed.
+2012-03-13 18:58:20,500 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist) is accepted.
+2012-03-13 18:58:20,500 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 18:58:20,500 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF is accepted.
+2012-03-13 18:58:20,500 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 18:58:20,500 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF is accepted.
+2012-03-13 18:58:20,500 INFO  ConfigClientWorker-Default       - [Success] Registration of Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF is accepted.
+2012-03-13 18:58:21,531 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemService:1.0.0.daily.ROUTING.RULE, Revision: 1, Empty)
+2012-03-13 18:58:21,531 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemService:1.0.0.daily.ROUTING.RULE) in group HSF
+2012-03-13 18:58:21,531 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.config.serverlist, Revision: 3, Count: 2, String[0]: remoting://10.232.16.8:9600?priority=0)
+2012-03-13 18:58:21,531 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE, Revision: 3, Count: 1, String[0]: Groovy_v200907@
+)
+2012-03-13 18:58:21,531 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (com.taobao.config.client.ServerListSynchronizer.1 for com.taobao.config.serverlist)
+2012-03-13 18:58:21,547 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily-L0, Revision: 3, Count: 2, String[0]: 10.232.12.113:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=3000)
+2012-03-13 18:58:21,547 INFO  ConfigClientNotifier             - [Cluster] Server list received: 2 entries.
+2012-03-13 18:58:21,547 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.ROUTING.RULE) in group HSF
+2012-03-13 18:58:21,547 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.113:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 18:58:21,547 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily-L0.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily-L0) in group HSF
+2012-03-13 18:58:21,547 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemService:1.0.0.daily.1 for com.taobao.item.service.ItemService:1.0.0.daily) in group HSF
+2012-03-13 18:58:22,547 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily, Revision: 3, Count: 2, String[0]: 10.232.12.113:12200?CLIENTRETRYCONNECTIONTIMES=3&CLIENTRETRYCONNECTIONTIMEOUT=1000&_SERIALIZETYPE=java&METHOD_TO_INJECT_CONSUMERIP_PROP_KEY=setConsumerIP&_IDLETIMEOUT=600&_TIMEOUT=10000)
+2012-03-13 18:58:22,547 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily) in group HSF
+2012-03-13 18:58:22,547 INFO  ConfigClientWorker-Default       - [Data] Received. (ID: com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE, Revision: 3, Empty)
+2012-03-13 18:58:22,547 INFO  ConfigClientNotifier             - [Notifier] Notify Cacheable Subscriber (HSFSubscriber-com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE.2 for com.taobao.item.service.ItemQueryService:1.0.0.daily.ROUTING.RULE) in group HSF

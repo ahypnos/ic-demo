@@ -46,9 +46,19 @@ public class ItemQueryServiceClientDemo {
 	private Log log = LoggerFactory.getLogger(this.getClass());
 
 	private ItemQueryServiceClient itemQueryServiceClient;
+   
+	private  List<Long> itemIdList=new ArrayList<Long>(){/**
+		 * 
+		 */
+		private static final long serialVersionUID = 4576510935105518152L;
 
+	{add(1500003118097L);}};
+    private long itemId=1500003118097L;
+ 
+    private long sellerId=77888896L;
+    private long userId=77888896L;
 	public static void main(String[] arg) {
-		new ItemQueryServiceClientDemo().queryItemForBuy();
+		new ItemQueryServiceClientDemo().queryItemById();
 	}
 
 	public ItemQueryServiceClientDemo() {
@@ -67,11 +77,8 @@ public class ItemQueryServiceClientDemo {
 	 */
 
 	public void queryItemListByIdListWithUserId() {
-		List<Long> itemIdList = new ArrayList<Long>();
-		itemIdList.add(1L);
-		itemIdList.add(2L);
-		long sellerId = 2L;
-
+		
+		  System.out.println("---------------调用方法queryItemListByIdListWithUserId----------------");
 		try {
 
 			BatchItemResultDO result = itemQueryServiceClient
@@ -79,6 +86,8 @@ public class ItemQueryServiceClientDemo {
 
 			if (result.isSuccess()) {
 				// do something
+	 System.out.println("------------调用queryItemListByIdListWithUserId接口成功-------------"+result.getItemList().get(0));
+				
 			} else {
 
 				// 操作失败id以及失败的原因 格式为 {reason1=[id1,id2...],reason2=[di3,id4...]
@@ -101,13 +110,15 @@ public class ItemQueryServiceClientDemo {
 	 */
 
 	public void queryUserRecommendItemCount() {
+		 System.out.println("---------------调用方法queryUserRecommendItemCount----------------");
+		
 		QueryRecommendOption recommendOption = new QueryRecommendOption();
 		recommendOption.setIncludeUserMaxRecommendCount(true);// true 查询用户最大推荐数
 																// false不查
 		recommendOption.setIncludeUserRecommendedCount(true);// true
 																// 查询用户当前使用推荐数，false不差
 
-		long userId = 2L;
+		
 
 		try {
 
@@ -116,6 +127,11 @@ public class ItemQueryServiceClientDemo {
 
 			if (result.isSuccess()) {
 				// do something
+				
+	 System.out.println("------------调用queryItemListByIdListWithUserId接口成功-------------"+result.getUserRecommendedCount());
+					
+				
+				
 			} else {
 
 				// 操作失败的原因
@@ -135,13 +151,16 @@ public class ItemQueryServiceClientDemo {
 	 * @see ItemQueryService#queryUserRecommendItemCount(long,QueryRecommendOption)
 	 */
 	public void queryItemVideoListByVideo() {
-
-		BaseUserDO seller = new BaseUserDO();
-		seller.setUserId(1L);
+      
 		long videoId = 1L;
+		userId=1L;//请出入正确的 userId和videoId
+		
+		BaseUserDO seller = new BaseUserDO();
+		seller.setUserId(userId);
+		
 		QueryVideoItemOption option = new QueryVideoItemOption();
 		option.setOnlyTotalCount(true);// 只查询关联的商品总数
-
+       
 		try {
 
 			BatchItemVideoResultDO result = itemQueryServiceClient
@@ -167,7 +186,7 @@ public class ItemQueryServiceClientDemo {
 	 */
 	public void queryItemDescription() {
 
-		String descPath = " url ";
+		String descPath = " url ";//填写正确的url
 		@SuppressWarnings("unused")
 		String result = itemQueryServiceClient.queryItemDescription(descPath);
 
@@ -196,7 +215,6 @@ public class ItemQueryServiceClientDemo {
 	 */
 	public void queryItemQuantityById() {
 
-		Long itemId = 1L;
 		try {
 			ResultDO<Integer> result = itemQueryServiceClient
 					.queryItemQuantityById(itemId);
@@ -226,12 +244,10 @@ public class ItemQueryServiceClientDemo {
 
 	public void queryItemsByIdsWithCache() {
 
-		List<Long> itemIds = new ArrayList<Long>();
-		itemIds.add(1L);// itemIds.size()<=20
 		QueryItemOptionsDO options = new QueryItemOptionsDO();
 		try {
 			BatchItemResultDO result = itemQueryServiceClient
-					.queryItemsByIdsWithCache(itemIds, options,
+					.queryItemsByIdsWithCache(itemIdList, options,
 							getOtherAppInfo());
 
 			if (result.isSuccess()) {
@@ -260,10 +276,8 @@ public class ItemQueryServiceClientDemo {
 
 	public void queryItemsByIdsOnlyFromCache() {
 
-		List<Long> itemIds = new ArrayList<Long>();
-		itemIds.add(1L);
 		BatchItemResultDO result = itemQueryServiceClient
-				.queryItemsByIdsOnlyFromCache(itemIds);
+				.queryItemsByIdsOnlyFromCache(itemIdList);
 		if (result.isSuccess()) {
 
 			// do something
@@ -285,10 +299,7 @@ public class ItemQueryServiceClientDemo {
 	 */
 	public void queryItemsByIds() {
 
-		List<Long> itemIdList = new ArrayList<Long>();
-		itemIdList.add(1L);
-		itemIdList.add(2L);
-
+		
 		QueryItemOptionsDO options = new QueryItemOptionsDO();
 		options.setIncludeSkus(true);// 需要查询商品的sku信息，通过setXXX方法设置需要查询的额外信息
 
@@ -326,20 +337,22 @@ public class ItemQueryServiceClientDemo {
 	 */
 	public void queryItemById() {
       System.out.println("------------调用 queryItemById接口-------------");
-		long itemId = 1L;
+		
 		QueryItemOptionsDO options = new QueryItemOptionsDO();
 		options.setIncludeSkus(true);// 需要查询商品的sku信息，通过setXXX方法设置需要查询的额外信息
-
+        
 		// options.setIncludeDescription(true)想要获取宝贝的描述信息，则必须必须配置txtFileManager
 		// 否则会抛出new IllegalArgumentException("tfs客户端配置不能为空!")的异常
-
+        
 		try {
 
-			ItemResultDO result = itemQueryServiceClient.queryItemById(itemId,
-					options, getOtherAppInfo());
+			ItemResultDO result = itemQueryServiceClient.queryItemById(itemId,options, getOtherAppInfo());
 
 			if (result.isSuccess()) {
 
+				 
+				 System.out.println("------------调用 queryItemById接口成功-------------"+result.getItem());
+				
 				// do something
 			} else {
 				// 操作失败的原因
@@ -364,8 +377,7 @@ public class ItemQueryServiceClientDemo {
 
 	public void queryItemByIdWithCache() {
 
-		long itemId = 1L;
-
+	
 		QueryItemOptionsDO options = new QueryItemOptionsDO();
 		options.setIncludeDescription(true);//获取该商品的描述信息
 		try {
@@ -398,8 +410,7 @@ public class ItemQueryServiceClientDemo {
 	 */
 
 	public void queryItemByIdOnlyFromCache() {
-		long itemId = 1L;
-
+	
 		
 		ItemResultDO result = itemQueryServiceClient
 				.queryItemByIdOnlyFromCache(itemId);
@@ -422,7 +433,7 @@ public class ItemQueryServiceClientDemo {
 	 */
   public void queryItemImageList(){
 	  
-	long itemId=1L;
+
 	try {
 		ResultDO<List<String>> result= itemQueryServiceClient.queryItemImageList(itemId);
 		if(result.isSuccess()){
@@ -453,12 +464,10 @@ public class ItemQueryServiceClientDemo {
 	  
 	  List<ItemAndSkuIdDO> itemAndSkuIdList=new ArrayList<ItemAndSkuIdDO>();
 	  ItemAndSkuIdDO  idDo=new ItemAndSkuIdDO();
-	  idDo.setItemId(11L);
-	  idDo.setSkuId(22L);
+	  idDo.setItemId(itemId);
+	  idDo.setSkuId(1L);
 	  itemAndSkuIdList.add(idDo);
-	  idDo.setItemId(33L);
-	  idDo.setSkuId(44L);
-	  itemAndSkuIdList.add(idDo);
+	  
 	  try {
 		  itemQueryServiceClient.setIcFailoverForQueryItemAndSku(true);//打开容灾开关
 			ArrayResultDO<ItemAndSkuBond> result= itemQueryServiceClient.queryItemAndSkuListWithPvToText
@@ -490,11 +499,8 @@ public class ItemQueryServiceClientDemo {
   public void queryItemAndSkuListWithoutPvToText(){
 	  List<ItemAndSkuIdDO> itemAndSkuIdList=new ArrayList<ItemAndSkuIdDO>();
 	  ItemAndSkuIdDO  idDo=new ItemAndSkuIdDO();
-	  idDo.setItemId(11L);
-	  idDo.setSkuId(22L);
-	  itemAndSkuIdList.add(idDo);
-	  idDo.setItemId(33L);
-	  idDo.setSkuId(44L);
+	  idDo.setItemId(itemId);
+	  idDo.setSkuId(1L);
 	  itemAndSkuIdList.add(idDo);
 	  boolean usecatch=true;//走缓存
 	  try {
@@ -528,8 +534,7 @@ public class ItemQueryServiceClientDemo {
   public void querySkuBySkuId(){
 	  
 			long skuId=1L;
-			long itemId=1L;
-			QuerySkuOptionsDO queryOption=new QuerySkuOptionsDO() ;
+		    QuerySkuOptionsDO queryOption=new QuerySkuOptionsDO() ;
 			queryOption.setChangePropertyIdToText(true);//将属性转换成text格式
 			
 			try {
@@ -552,7 +557,6 @@ public class ItemQueryServiceClientDemo {
     */
   public void querySkuWithUserId(){
 	    long skuId=1L;
-		long userId=1L;
 		QuerySkuOptionsDO queryOption=new QuerySkuOptionsDO() ;
 		queryOption.setChangePropertyIdToText(true);//将属性转换成text格式
 		
@@ -578,9 +582,6 @@ public class ItemQueryServiceClientDemo {
   	 *  可以选择是否先走缓存如果缓存查不到，在走数据库
      */
     public void queryItemForDetail(){
-  	   
- 	   long itemId=1L;
-  		
   		try {
   			
  			ResultDO<ItemDO> result = itemQueryServiceClient.queryItemForDetail(itemId);
@@ -606,8 +607,6 @@ public class ItemQueryServiceClientDemo {
   	 *  可以选择是否先走缓存如果缓存查不到，在走数据库
      */
     public void queryItemForBuy(){
-  	   
- 	   long itemId=1500002989095L;
   		
   		try {
   			
@@ -632,16 +631,15 @@ public class ItemQueryServiceClientDemo {
     
    /**
   	 * 为mealdetail批量查询宝贝
-     * 为mealdetail的接口一次传入5个itemid，返回itemList
+     * 为mealdetail的接口一次传入不能超过5个itemid，返回itemList
      */
     public void queryItemListForMeal(){
   	   
- 	   List<Long> itemIds=new ArrayList<Long>();
- 	   itemIds.add(1L);//itemIds.size()不能超过五个
+ 	
   		
   		try {
   			
- 			BatchItemResultDO result = itemQueryServiceClient.queryItemListForMeal(itemIds);
+ 			BatchItemResultDO result = itemQueryServiceClient.queryItemListForMeal(itemIdList);
   			if(result.isSuccess()){
   				
   		  	  
@@ -688,8 +686,6 @@ public class ItemQueryServiceClientDemo {
      */
     public void queryAuctionStoreList(){
     	
-		
-  		long itemId=1L;
 		ArrayResultDO<AuctionStoreDO> result;
 		try {
 			result = itemQueryServiceClient.queryAuctionStoreList(itemId);
@@ -752,8 +748,6 @@ public class ItemQueryServiceClientDemo {
 		 * 
 		 */
 	  public void queryItemByOuterId(){
-		  
-	        long userId=1L;
 			String outerId="hello";
 			QueryItemOptionsDO options=new QueryItemOptionsDO();
 			options.setIncludeAttaches(true);//查询商品的附件信息
@@ -824,10 +818,7 @@ public class ItemQueryServiceClientDemo {
 		return infoDO;
 
 	}
-	/**
-	 * 
-	 * 情况所迫，无视这个方法就行了- -
-	 */
+	
 	public ResultDO<ItemDO> queryItemForDetail(Long itemId) {
 		ResultDO<ItemDO> result = null ;
 	  		try {

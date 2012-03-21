@@ -141,7 +141,7 @@ public class IcDemoConstants {
 	public static final String ITEM_CITY = "∫º÷›";
 	public static final String ITEM_PROV = "’„Ω≠";
 	public static final Integer ITEM_QUANTITY = 1;
-	public static final int ITEM_STUFF_STATUS = ITEM_NEW;
+	public static final int ITEM_STUFF_STATUS = ITEM_USED;
 	public static final String ITEM_ZOO = "19:1109;2:120";
 	public static final int ITEM_PROMOTED_STATUS = 0;
 	public static final Money ITEM_EMS_POST_FEE = new Money(20.00);
