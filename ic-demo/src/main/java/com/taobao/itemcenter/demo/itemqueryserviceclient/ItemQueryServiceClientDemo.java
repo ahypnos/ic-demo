@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Map.Entry;
 
 import org.apache.commons.logging.Log;
-import org.apache.ecs.xhtml.param;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -33,7 +32,6 @@ import com.taobao.item.domain.result.ResultDO;
 import com.taobao.item.exception.IcException;
 import com.taobao.item.service.ItemQueryService;
 import com.taobao.item.service.client.ItemQueryServiceClient;
-import com.taobao.itemcenter.demo.itemserviceclient.itemServiceClienDemo;
 import com.taobao.uic.common.domain.BaseUserDO;
 
 /*
@@ -59,15 +57,15 @@ public class ItemQueryServiceClientDemo {
     private long sellerId=13261504L;
     private long userId=13261504L;
     private long skuid1=85430289L;
-    private long skuid2=85430291L;
+   
 	public static void main(String[] arg) {
 		ItemQueryServiceClientDemo  itemQueryServiceClient=new ItemQueryServiceClientDemo();
 		//itemQueryServiceClient.queryItemById_通过ID查询商品();
     	//itemQueryServiceClient.queryItemAndSkuListWithoutPvToText();
-		//itemQueryServiceClient.getFeatureValueOfAutoSend();
+		itemQueryServiceClient.getFeatureValueOfAutoSend();
 		//itemQueryServiceClient.queryAttachContent();
 //	      itemQueryServiceClient.queryAuctionStore();
-		itemQueryServiceClient.queryItemAndSkuListWithPvToText();//tair的配置
+		//itemQueryServiceClient.queryItemAndSkuListWithPvToText();//tair的配置
 		//itemQueryServiceClient.queryItemByIdOnlyFromCache();
 		//itemQueryServiceClient.queryItemByIdWithCache();
 		//itemQueryServiceClient.queryItemByOuterId();
@@ -693,11 +691,8 @@ public class ItemQueryServiceClientDemo {
 		props.add(prop); 
 		prop.setPropertyId(3L);
 		props.add(prop);
-		
-		
-  		String result = itemQueryServiceClient.getFeatureValueOfAutoSend(catId, props);
-  		System.out.print("---------得到的宝贝属性值为:"+result+"------------");
-  	  
+		String result = itemQueryServiceClient.getFeatureValueOfAutoSend(catId, props);
+  	    printLine("调用getFeatureValueOfAutoSend方法成功");
     }
     
     /**
