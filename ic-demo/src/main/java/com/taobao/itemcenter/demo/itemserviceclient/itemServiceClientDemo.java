@@ -50,12 +50,10 @@ import com.taobao.item.service.ItemService;
 import com.taobao.item.service.client.ItemQueryServiceClient;
 import com.taobao.item.service.client.ItemServiceClient;
 import com.taobao.item.util.StringUtils;
-import com.taobao.itemcenter.demo.itemqueryserviceclient.ItemQueryServiceClientDemo;
 import com.taobao.itemcenter.demo.utils.IcDemoConstants;
 import com.taobao.itemcenter.demo.utils.ItemUtils;
 import com.taobao.itemcenter.demo.utils.UserDataConstants;
-public class itemServiceClienDemo {
-
+public class itemServiceClientDemo {
 	private Log log = LoggerFactory.getLogger(this.getClass());
 
 	private static long itemId = 1500006057292L;
@@ -64,7 +62,8 @@ public class itemServiceClienDemo {
 	private static ItemQueryServiceClient itemQueryServiceClient;
 	private static String fileName = "src/main/resources/itemServiceClient/test.jpg";
 	private static long spuid=0L;
-			/**
+ 
+	/**
 	 * 添加商品相关信息
 	 * 
 	 */
@@ -1731,7 +1730,7 @@ public class itemServiceClienDemo {
 		}
 	}
 
-	public itemServiceClienDemo() {
+	public itemServiceClientDemo() {
 
 		String[] location = { "itemServiceClient/spring-ic-hsf.xml" };
 		ApplicationContext context = new ClassPathXmlApplicationContext(
@@ -1750,7 +1749,7 @@ public class itemServiceClienDemo {
 
 	public static void main(String[] arg) {	
 //		new ExtractColor();
-		itemServiceClienDemo itemServiceClien=new itemServiceClienDemo();
+		itemServiceClientDemo itemServiceClien=new itemServiceClientDemo();
  		//itemServiceClien.publishNumberRangeItem();
 		//itemServiceClien.publishItem();
         //itemServiceClien.publishItemWithOutUserPreview();
@@ -1760,10 +1759,10 @@ public class itemServiceClienDemo {
 		//itemServiceClien.refreshItemPostage();
 	    // itemServiceClien.removeItemOptions();
 	    //itemServiceClien.removeItemZoo();
-	    //itemServiceClien.saveImageToTfs();
+	    itemServiceClien.saveImageToTfs();
 		//itemServiceClien.saveItemFeatures();
       	//itemServiceClien.sellerDelItem();
-		  itemServiceClien.sellerDelItemImage();
+//		  itemServiceClien.sellerDelItemImage();
 		//itemServiceClien.sellerDownShelfItem();
 //		  itemServiceClien.sellerIncreaseItemSkuQuantity;//哥哥真的不想发sku了  
 	    //itemServiceClien.sellerModifyItemQuantity();
