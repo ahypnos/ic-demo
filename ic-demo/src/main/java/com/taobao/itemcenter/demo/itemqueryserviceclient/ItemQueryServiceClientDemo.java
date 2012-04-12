@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map.Entry;
 
 import org.apache.commons.logging.Log;
+import org.apache.ecs.xhtml.param;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -32,6 +33,7 @@ import com.taobao.item.domain.result.ResultDO;
 import com.taobao.item.exception.IcException;
 import com.taobao.item.service.ItemQueryService;
 import com.taobao.item.service.client.ItemQueryServiceClient;
+import com.taobao.itemcenter.demo.itemserviceclient.itemServiceClienDemo;
 import com.taobao.uic.common.domain.BaseUserDO;
 
 /*
@@ -53,14 +55,29 @@ public class ItemQueryServiceClientDemo {
 		private static final long serialVersionUID = 4576510935105518152L;
 
 	{add(1500003118097L);}};
-    private long itemId=1500003118097L;
- 
-    private long sellerId=77888896L;
-    private long userId=77888896L;
+    private long itemId=2249693031L;
+    private long sellerId=13261504L;
+    private long userId=13261504L;
+    private long skuid1=85430289L;
+    private long skuid2=85430291L;
 	public static void main(String[] arg) {
-		new ItemQueryServiceClientDemo().queryItemById();
+		ItemQueryServiceClientDemo  itemQueryServiceClient=new ItemQueryServiceClientDemo();
+		//itemQueryServiceClient.queryItemById_通过ID查询商品();
+    	//itemQueryServiceClient.queryItemAndSkuListWithoutPvToText();
+		//itemQueryServiceClient.getFeatureValueOfAutoSend();
+		//itemQueryServiceClient.queryAttachContent();
+//	      itemQueryServiceClient.queryAuctionStore();
+		itemQueryServiceClient.queryItemAndSkuListWithPvToText();//tair的配置
+		//itemQueryServiceClient.queryItemByIdOnlyFromCache();
+		//itemQueryServiceClient.queryItemByIdWithCache();
+		//itemQueryServiceClient.queryItemByOuterId();
+		//itemQueryServiceClient.queryItemDescription();
+        //itemQueryServiceClient.queryItemForBuy();
+		//itemQueryServiceClient.queryItemImageList();
+		//itemQueryServiceClient.queryItemVideoListByVideo();
+	    //itemQueryServiceClient.querySkuWithUserId();
+		//itemQueryServiceClient.queryUserRecommendItemCount();
 	}
-
 	public ItemQueryServiceClientDemo() {
 
 		String[] location = { "itemQueryServiceClient/spring-ic-hsf.xml" };
@@ -78,7 +95,7 @@ public class ItemQueryServiceClientDemo {
 
 	public void queryItemListByIdListWithUserId() {
 		
-		  System.out.println("---------------调用方法queryItemListByIdListWithUserId----------------");
+		  printLine("调用queryItemListByIdListWithUserId方法");
 		try {
 
 			BatchItemResultDO result = itemQueryServiceClient
@@ -86,7 +103,7 @@ public class ItemQueryServiceClientDemo {
 
 			if (result.isSuccess()) {
 				// do something
-	 System.out.println("------------调用queryItemListByIdListWithUserId接口成功-------------"+result.getItemList().get(0));
+	              printLine("调用queryItemListByIdListWithUserId接口成功"+result.getItemList().get(0));
 				
 			} else {
 
@@ -110,8 +127,8 @@ public class ItemQueryServiceClientDemo {
 	 */
 
 	public void queryUserRecommendItemCount() {
-		 System.out.println("---------------调用方法queryUserRecommendItemCount----------------");
-		
+	
+		printLine("调用方法queryUserRecommendItemCount");
 		QueryRecommendOption recommendOption = new QueryRecommendOption();
 		recommendOption.setIncludeUserMaxRecommendCount(true);// true 查询用户最大推荐数
 																// false不查
@@ -126,9 +143,9 @@ public class ItemQueryServiceClientDemo {
 					.queryUserRecommendItemCount(userId, recommendOption);
 
 			if (result.isSuccess()) {
+				printLine("调用方法queryUserRecommendItemCount成功");
 				// do something
 				
-	 System.out.println("------------调用queryItemListByIdListWithUserId接口成功-------------"+result.getUserRecommendedCount());
 					
 				
 				
@@ -151,13 +168,12 @@ public class ItemQueryServiceClientDemo {
 	 * @see ItemQueryService#queryUserRecommendItemCount(long,QueryRecommendOption)
 	 */
 	public void queryItemVideoListByVideo() {
-      
-		long videoId = 1L;
-		userId=1L;//请出入正确的 userId和videoId
+      printLine("调用queryItemVideoListByVideo方法");
+		long videoId = 1L;//请出入正确的 userId和videoId
 		
 		BaseUserDO seller = new BaseUserDO();
 		seller.setUserId(userId);
-		
+		seller.setId("1a116e61cc5e5f2701955d2aeb5fe0a1");
 		QueryVideoItemOption option = new QueryVideoItemOption();
 		option.setOnlyTotalCount(true);// 只查询关联的商品总数
        
@@ -167,6 +183,7 @@ public class ItemQueryServiceClientDemo {
 					.queryItemVideoListByVideo(seller, videoId, option);
 
 			if (result.isSuccess()) {
+				printLine("调用queryItemVideoListByVideo方法成功");
 				// do something
 			} else {
 
@@ -185,10 +202,11 @@ public class ItemQueryServiceClientDemo {
 	 * @see ItemQueryService#queryItemDescription(String)
 	 */
 	public void queryItemDescription() {
-
-		String descPath = " url ";//填写正确的url
+		printLine("调用queryItemDescription方法");
+		String descPath = "i7/1f1/551/1fa559c20fb10bac15ce0c8aea8ce269";//填写正确的url
 		@SuppressWarnings("unused")
 		String result = itemQueryServiceClient.queryItemDescription(descPath);
+		printLine("调用queryItemDescription方法成功返回结果为"+result);
 
 		// user result do something
 
@@ -200,12 +218,13 @@ public class ItemQueryServiceClientDemo {
 	 * @see ItemQueryService#queryAttachContent(String)
 	 */
 	public void queryAttachContent() {
-
+    printLine("调用queryAttachContent方法");
 		String path = "path";
 		String suffix = "suffix";
 		@SuppressWarnings("unused")
 		byte[] result = itemQueryServiceClient.queryAttachContent(path, suffix);
 		// user result do something
+		printLine("调用queryAttachContent方法返回结果为"+result);
 	}
 
 	/**
@@ -335,8 +354,8 @@ public class ItemQueryServiceClientDemo {
 	 * @see ItemQueryService#queryItemById(Long,QueryItemOptionsDO,AppInfoDO)
 	 * 
 	 */
-	public void queryItemById() {
-      System.out.println("------------调用 queryItemById接口-------------");
+	public void queryItemById_通过ID查询商品() {
+      printLine("调用 queryItemById接口");
 		
 		QueryItemOptionsDO options = new QueryItemOptionsDO();
 		options.setIncludeSkus(true);// 需要查询商品的sku信息，通过setXXX方法设置需要查询的额外信息
@@ -351,7 +370,7 @@ public class ItemQueryServiceClientDemo {
 			if (result.isSuccess()) {
 
 				 
-				 System.out.println("------------调用 queryItemById接口成功-------------"+result.getItem());
+				 printLine("调用 queryItemById接口成功"+result.getItem().getSkuList());
 				
 				// do something
 			} else {
@@ -377,7 +396,7 @@ public class ItemQueryServiceClientDemo {
 
 	public void queryItemByIdWithCache() {
 
-	
+	 printLine("调用queryItemByIdWithCache方法");
 		QueryItemOptionsDO options = new QueryItemOptionsDO();
 		options.setIncludeDescription(true);//获取该商品的描述信息
 		try {
@@ -385,7 +404,7 @@ public class ItemQueryServiceClientDemo {
 					.queryItemByIdWithCache(itemId, options, getOtherAppInfo());
 
 			if (result.isSuccess()) {
-
+				printLine("调用queryItemByIdWithCache方法成功");
 				// do something
 			} else {
 				// 操作失败的原因
@@ -410,13 +429,12 @@ public class ItemQueryServiceClientDemo {
 	 */
 
 	public void queryItemByIdOnlyFromCache() {
-	
-		
+	   printLine("调用queryItemByIdOnlyFromCache方法");		
 		ItemResultDO result = itemQueryServiceClient
 				.queryItemByIdOnlyFromCache(itemId);
 
 		if (result.isSuccess()) {
-
+			printLine("调用queryItemByIdOnlyFromCache方法成功");	
 			// do something
 		} else {
 			// 操作失败的原因
@@ -432,12 +450,12 @@ public class ItemQueryServiceClientDemo {
 	 *  @return 多图地址列表
 	 */
   public void queryItemImageList(){
-	  
+	  printLine("调用queryItemImageList方法");
 
 	try {
 		ResultDO<List<String>> result= itemQueryServiceClient.queryItemImageList(itemId);
 		if(result.isSuccess()){
-			
+			printLine("调用queryItemImageList方法成功");
 			//do something
 		}else{
 			
@@ -461,11 +479,11 @@ public class ItemQueryServiceClientDemo {
      *
 	 */
   public void queryItemAndSkuListWithPvToText(){
-	  
+	  printLine("调用queryItemAndSkuListWithPvToText方法");
 	  List<ItemAndSkuIdDO> itemAndSkuIdList=new ArrayList<ItemAndSkuIdDO>();
 	  ItemAndSkuIdDO  idDo=new ItemAndSkuIdDO();
 	  idDo.setItemId(itemId);
-	  idDo.setSkuId(1L);
+	  idDo.setSkuId(skuid1);
 	  itemAndSkuIdList.add(idDo);
 	  
 	  try {
@@ -473,7 +491,7 @@ public class ItemQueryServiceClientDemo {
 			ArrayResultDO<ItemAndSkuBond> result= itemQueryServiceClient.queryItemAndSkuListWithPvToText
 					(itemAndSkuIdList);
 			if(result.isSuccess()){
-				
+				  printLine("调用queryItemAndSkuListWithPvToText方法成功");
 				//do something
 			}else{
 				
@@ -497,10 +515,11 @@ public class ItemQueryServiceClientDemo {
 	*不带pv转换的ItemAndSku查询接口, 是否使用缓存, 需要调用方通过参数自己来控制
     */
   public void queryItemAndSkuListWithoutPvToText(){
+	  printLine("调用queryItemAndSkuListWithoutPvToText方法");
 	  List<ItemAndSkuIdDO> itemAndSkuIdList=new ArrayList<ItemAndSkuIdDO>();
 	  ItemAndSkuIdDO  idDo=new ItemAndSkuIdDO();
 	  idDo.setItemId(itemId);
-	  idDo.setSkuId(1L);
+	  idDo.setSkuId(skuid1);
 	  itemAndSkuIdList.add(idDo);
 	  boolean usecatch=true;//走缓存
 	  try {
@@ -510,8 +529,8 @@ public class ItemQueryServiceClientDemo {
 			ArrayResultDO<ItemAndSkuBond> result= itemQueryServiceClient.queryItemAndSkuListWithoutPvToText
 					(itemAndSkuIdList,usecatch);
 			if(result.isSuccess()){
+				printLine("调用queryItemAndSkuListWithoutPvToText方法成功");
 				
-				//do something
 			}else{
 				
 				// 操作失败的原因
@@ -533,12 +552,11 @@ public class ItemQueryServiceClientDemo {
     */
   public void querySkuBySkuId(){
 	  
-			long skuId=1L;
 		    QuerySkuOptionsDO queryOption=new QuerySkuOptionsDO() ;
 			queryOption.setChangePropertyIdToText(true);//将属性转换成text格式
 			
 			try {
-				ItemSkuResultDO result = itemQueryServiceClient.querySkuBySkuId(skuId, itemId, queryOption);
+				ItemSkuResultDO result = itemQueryServiceClient.querySkuBySkuId(skuid1, itemId, queryOption);
 				if(result.isSuccess()){
 					
 					//do something
@@ -556,14 +574,14 @@ public class ItemQueryServiceClientDemo {
 	*		根据skuId和userId获取商品SKU记录
     */
   public void querySkuWithUserId(){
-	    long skuId=1L;
+	  printLine("调用querySkuWithUserId方法");
 		QuerySkuOptionsDO queryOption=new QuerySkuOptionsDO() ;
 		queryOption.setChangePropertyIdToText(true);//将属性转换成text格式
 		
 		try {
-			ItemSkuResultDO result = itemQueryServiceClient.querySkuWithUserId(skuId, userId, queryOption);
+			ItemSkuResultDO result = itemQueryServiceClient.querySkuWithUserId(skuid1, userId, queryOption);
 			if(result.isSuccess()){
-				
+				  printLine("调用querySkuWithUserId方法成功");
 				//do something
 			}else{
 				//do something
@@ -607,12 +625,12 @@ public class ItemQueryServiceClientDemo {
   	 *  可以选择是否先走缓存如果缓存查不到，在走数据库
      */
     public void queryItemForBuy(){
-  		
+  		printLine("调用queryItemForBuy方法");
   		try {
   			
  			ResultDO<ItemDO> result = itemQueryServiceClient.queryItemForBuy(itemId);
   			if(result.isSuccess()){
-  				
+  				printLine("调用queryItemForBuy方法成功");
   				//do something
   			}else{
   				//打印错误信息
@@ -666,6 +684,7 @@ public class ItemQueryServiceClientDemo {
   	 *  普通  宝贝不会调用
      */
     public void getFeatureValueOfAutoSend(){
+    	printLine("调用getFeatureValueOfAutoSend方法");
     	long catId = 1L;
 		List<ItemPVPairDO> props = new ArrayList<ItemPVPairDO>();
 		ItemPVPairDO prop=new ItemPVPairDO();
@@ -710,15 +729,16 @@ public class ItemQueryServiceClientDemo {
      */
     public void queryAuctionStore(){
     	
-		
+		printLine("调用queryAuctionStore方法");
   		AuctionStoreIdDO auctionId=new AuctionStoreIdDO();
-  		auctionId.setAuctionId(1L);
-  		auctionId.setSkuId(2L);
+  		auctionId.setAuctionId(itemId);
+  		auctionId.setSkuId(skuid1);
 		ResultDO<AuctionStoreDO> result;
 		try {
 			result = itemQueryServiceClient.queryAuctionStore(auctionId);
+			printLine(result.getErrorStr());
 			if(result.isSuccess()){
-			result.getModule();//查到的分仓库存信息
+				printLine("调用queryAuctionStore方法成功"+result.getModule());//查到的分仓库存信息
 				//do something
 			}else{
               //打印出错信息
@@ -748,6 +768,7 @@ public class ItemQueryServiceClientDemo {
 		 * 
 		 */
 	  public void queryItemByOuterId(){
+		  printLine("调用queryItemByOuterId方法");
 			String outerId="hello";
 			QueryItemOptionsDO options=new QueryItemOptionsDO();
 			options.setIncludeAttaches(true);//查询商品的附件信息
@@ -758,12 +779,11 @@ public class ItemQueryServiceClientDemo {
 						.queryItemByOuterId(userId, outerId, options);
 		
 			if (result.isSuccess()) {
-	
+				  printLine("调用queryItemByOuterId方法成功");
 				// do something
 			} else {
 				// 操作失败的原因
-	          
-				log.warn(result.getErrorStr() + "failed query");
+	          log.warn(result.getErrorStr() + "failed query");
 				// do something
 	
 			}   	
@@ -797,7 +817,7 @@ public class ItemQueryServiceClientDemo {
 	 * 
 	 * @return
 	 */
-	public static AppInfoDO getOtherAppInfo() {
+	private static AppInfoDO getOtherAppInfo() {
 
 		AppInfoDO infoDO = new AppInfoDO();
 		infoDO.setAppName(AppInfoConstants.NAME_OTHER);
@@ -808,7 +828,7 @@ public class ItemQueryServiceClientDemo {
 
 	}
 
-	public static AppInfoDO getUnknowAppInfo() {
+	private static AppInfoDO getUnknowAppInfo() {
 
 		AppInfoDO infoDO = new AppInfoDO();
 		infoDO.setAppName(AppInfoConstants.NAME_UNKNOWN);
@@ -818,25 +838,17 @@ public class ItemQueryServiceClientDemo {
 		return infoDO;
 
 	}
-	
-	public ResultDO<ItemDO> queryItemForDetail(Long itemId) {
-		ResultDO<ItemDO> result = null ;
-	  		try {
-	  			
-	  			result = itemQueryServiceClient.queryItemForDetail(itemId);
-	  			if(result.isSuccess()){
-	  				
-	  				//do something
-	  			}else{
-	  				//打印错误信息
-	 				log.warn(result.getErrorMessages());
-	 				//do something
-	  				
-	  			}
-	  		} catch (IcException e) {
-	  			// TODO Auto-generated catch block
-	  			e.printStackTrace();
-	  		}
-	  		return result;
+	/**
+	 * 打印一行，带标题
+	 * 
+	 * @param title
+	 *            标题
+	 */
+	private void printLine(String title) {
+		System.out
+				.println(String
+						.format("-------------------------------------------%s-------------------------------------------\n",
+								title));
 	}
 }
+

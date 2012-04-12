@@ -94,7 +94,42 @@ private static ItemQueryServiceClient itemQueryServiceClient;
 	}
 	
 
+	 public static ItemDO createItemDO(Long userId, long catId, boolean isBSeller) {
+		 ItemDO item = new ItemDO();
+	        item.setCategoryId(catId);
+	        item.setUserId(userId);
+	        item.setTitle(IcDemoConstants.ITEM_TITLE);
+	        item.setPictUrl(IcDemoConstants.ITEM_PICT_URL);
+	        item.setMinimumBid(IcDemoConstants.ITEM_MINIMUM_BID);
+	        item.setReservePrice(IcDemoConstants.ITEM_RESERVE_PRICE);
+	        item.setAuctionType(IcDemoConstants.ITEM_AUCTION_TYPE);
+	        item.setDuration(IcDemoConstants.ITEM_DURATION);
+	        item.setCity(IcDemoConstants.ITEM_CITY);
+	        item.setProv(IcDemoConstants.ITEM_PROV);
+	        item.setQuantity(IcDemoConstants.ITEM_QUANTITY);
+	        item.setStuffStatus(IcDemoConstants.ITEM_STUFF_STATUS);
+	        item.setPromotedStatus(IcDemoConstants.ITEM_PROMOTED_STATUS);
+	        item.setOldQuantity(IcDemoConstants.ITEM_OLD_QUANTITY);
+	        item.setPropertyAlias(IcDemoConstants.ITEM_PROPERTY_ALIAS);
+	        item.setDescription(IcDemoConstants.ITEM_DESCRIPTION);
+	        item.setAuctionStatus(IcDemoConstants.ITEM_AUCTION_STATUS);
+	        item.setFeatureString(IcDemoConstants.ITEM_FEATURES);
+	        item.setFeatureCc(IcDemoConstants.ITEM_FEATURE_CC);
+	        item.setMainColor(IcDemoConstants.ITEM_MAIN_COLOR);
+	        item.setSellerPayPostfee(false);
 
+	        // about fee
+	        item.setSecureTradeEmsPostFee(IcDemoConstants.ITEM_EMS_POST_FEE);
+	        item.setSecureTradeFastPostFee(IcDemoConstants.ITEM_FAST_POST_FEE);
+	        item.setSecureTradeOrdinaryPostFee(IcDemoConstants.ITEM_ORDINARY_POST_FEE);
+
+	        if (isBSeller) {
+	            item.setAuctionPoint(50);
+	            item.setOptionsHaveInvoice();//·¢Æ±
+	        }
+	        return item;
+	    }
+	    
 
 
 
@@ -164,8 +199,7 @@ private static ItemQueryServiceClient itemQueryServiceClient;
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		FileInputStream inputFile = null;
 		try {
-			inputFile = (FileInputStream) getInputStream(IcDemoConstants.IC_IMAGE_FILE_PATH
-					+ filename);
+			inputFile = (FileInputStream) getInputStream(filename);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -196,7 +230,7 @@ private static ItemQueryServiceClient itemQueryServiceClient;
 	 * 
 	 */
 	public static ItemImageDO createItemImageDO(long userId, long itemId,
-			int type, boolean isGetImage) {
+			int type, boolean isGetImage,String filename) {
 		ItemImageDO itemImage = new ItemImageDO();
 		itemImage.setUserId(userId);
 		itemImage.setItemId(itemId);
@@ -204,7 +238,7 @@ private static ItemQueryServiceClient itemQueryServiceClient;
 		itemImage.setType(type);
 		itemImage.setMajor(true);
 		if (isGetImage) {
-			itemImage.setImageData(getInputImage("test.jpg"));
+			itemImage.setImageData(getInputImage(filename));
 		}
 
 		return itemImage;
@@ -261,7 +295,7 @@ private static ItemQueryServiceClient itemQueryServiceClient;
 			itemImage.setImageName(filename);
 			itemImage.setImageUrl(null);
 			itemImage.setImagePosition(1);
-			itemImage.setImageData(getInputImage(filename));
+			//itemImage.setImageData(getInputImage(filename));
 			itemImage.setProperties("sjdjfj");
 			itemImage.setInputFileName(filename);
 			itemImageList.add(itemImage);
@@ -616,10 +650,8 @@ private static ItemQueryServiceClient itemQueryServiceClient;
 
 	public static InputStream getInputStream(String fileName)
 			throws FileNotFoundException {
-		URL url = ItemUtils.class.getClassLoader().getResource(
-				fileName);
-		String absolutePath = url.getFile();
-		return new FileInputStream(absolutePath);
+		
+		return new FileInputStream(fileName);
 	}
 
 	public static String getDataFilePath(String path, Class<?> object) {

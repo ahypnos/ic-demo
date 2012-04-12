@@ -21,5 +21,69 @@
 				<property name="version" value="1.0.0.daily-L0"></property>
 			</bean>
 		</property>
+		<property name="itemTairCacheService" ref="itemTairCacheService"/>
+		<property name="attachFileManager" ref="attachFileManager"/>
+		<property name="txtFileManager" ref="txtFileManager"/>
 	</bean>
+	<bean name="attachFileManager" class="com.taobao.item.file.FileManager">
+       <property name="tfsManager" ref="tfsManager"/>
+   </bean>
+  <bean name="txtFileManager" class="com.taobao.item.tfs.impl.TxtFileManagerImpl">
+       <property name="tfsManager" ref="tfsManager"/>
+   </bean>
+  
+   <bean id="tfsManager" factory-bean="tfsSupportProxyFactoryBean" factory-method="getProxy"/>
+   <bean id="tfsSupportProxyFactoryBean" class="com.taobao.common.tfs.RTfsProxyFactoryBean" init-method="init">
+        <property name="target" ref="targetTfsManager" />
+        <property name="parallelRegistrar" ref="parallelRegistrar" />
+        <property name="tfsName">
+            <value>TFS_IMAGE</value> 
+         <!--日常 TFS_IMAGE-->
+         <!--预发 TFS_IMAGE-->
+         <!--正式 TFS_IMAGE-->
+         <!--沙箱 TFS_IMAGE-->
+        </property>
+   </bean>
+   <bean id="targetTfsManager" class="com.taobao.common.tfs.DefaultTfsManager">
+      <property name="nsip">
+         <value>image-tfs.config-vip.taobao.net:3100</value> 
+         <!--日常 image-tfs.config-vip.taobao.net:3100-->
+         <!--预发 image-tfs.config-vip.taobao.com:3100-->
+         <!--正式 image-tfs.config-vip.taobao.com:3100-->
+         <!--沙箱 image-tfs.sandbox.taobao.net:3100-->
+      </property>
+   </bean>
+   <bean id="parallelRegistrar" class="com.taobao.rseries.RSeriesParallelRegistrar" init-method="init">
+      <property name="typeList">
+         <list>
+            <value>R-JDBC</value>
+            <value>R-TFS</value>
+            <value>R-FEED</value>
+            <value>R-SEARCH</value>
+         </list>
+      </property>
+      <property name="waitTime" value="30" />
+   </bean>
+		
+	
+	<bean id="itemTairCacheService" class="com.taobao.item.service.impl.ItemTairCacheServiceImpl">
+		<property name="itemTairManager" ref="tairManager" />
+</bean>
+	
+<bean id="tairManager" class="com.taobao.common.tair.impl.DefaultTairManager" init-method="init">
+	<property name="configServerList">
+		<list>
+			<value>tair.config-vip.taobao.net:5198</value>
+			<value>tair.config-vip.taobao.net:5198</value>
+		</list>
+	</property>
+	<property name="groupName" value="group_1" />
+	<property name="compressionThreshold" value="2048" />
+</bean>
+	
+	
+		
+	
+	
+	
 </beans>
