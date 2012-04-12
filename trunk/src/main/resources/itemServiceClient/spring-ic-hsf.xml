@@ -12,5 +12,88 @@
 				<property name="version" value="1.0.0.daily"></property>
 			</bean>
 		</property>
+		
+		<property name="itemServiceL2">
+			<bean class="com.taobao.hsfunit.app.spring.util.HSFSpringConsumerBean"
+				init-method="init">
+				<property name="interfaceName">
+					<value>com.taobao.item.service.ItemService</value>
+				</property>
+				<property name="version" value="1.0.0.daily-L2"></property>
+			</bean>
+		</property>
+		
+		<property name="pictureFileManager" ref="picFileManager"/>
 	</bean>
+	
+	<bean name="picFileManager" class="com.taobao.item.file.PictureFileManager">
+       <property name="tfsManager" ref="tfsManager"/>
+       <property name="imageColorManager" ref="imageColorManager"/>
+   </bean>
+   <bean id="imageColorManager" class="com.taobao.common.imagecolor.DefaultImageColorManager" />
+   <bean id="tfsManager" factory-bean="tfsSupportProxyFactoryBean" factory-method="getProxy"/>
+   <bean id="tfsSupportProxyFactoryBean" class="com.taobao.common.tfs.RTfsProxyFactoryBean" init-method="init">
+        <property name="target" ref="targetTfsManager" />
+        <property name="parallelRegistrar" ref="parallelRegistrar" />
+        <property name="tfsName">
+            <value>TFS_IMAGE</value> 
+         <!--日常 TFS_IMAGE-->
+         <!--预发 TFS_IMAGE-->
+         <!--正式 TFS_IMAGE-->
+         <!--沙箱 TFS_IMAGE-->
+        </property>
+   </bean>
+   <bean id="targetTfsManager" class="com.taobao.common.tfs.DefaultTfsManager">
+      <property name="nsip">
+         <value>image-tfs.config-vip.taobao.net:3100</value> 
+         <!--日常 image-tfs.config-vip.taobao.net:3100-->
+         <!--预发 image-tfs.config-vip.taobao.com:3100-->
+         <!--正式 image-tfs.config-vip.taobao.com:3100-->
+         <!--沙箱 image-tfs.sandbox.taobao.net:3100-->
+      </property>
+        <!-- tair排重数据库的serverlist -->
+		<property name="uniqueServerList">
+			<list>
+				<value>tair2.config-vip.taobao.net:5198</value>
+				<value>tair2.config-vip.taobao.net:5198</value>
+			</list>
+		</property>
+       <!-- tair排重数据库的groupName${idlesell_tair_group_name} -->
+	   <property name="groupName">
+		<value>group_1</value>
+	   </property>
+	   <!-- tair排重数据库的namespace -->
+	   <property name="namespace">
+		<value>100</value>
+	   </property>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+   </bean>
+   <bean id="parallelRegistrar" class="com.taobao.rseries.RSeriesParallelRegistrar" init-method="init">
+      <property name="typeList">
+         <list>
+            <value>R-JDBC</value>
+            <value>R-TFS</value>
+            <value>R-FEED</value>
+            <value>R-SEARCH</value>
+         </list>
+      </property>
+      <property name="waitTime" value="30" />
+   </bean>
+		
+		
+		
+	
+	
+	
+	
 </beans>
