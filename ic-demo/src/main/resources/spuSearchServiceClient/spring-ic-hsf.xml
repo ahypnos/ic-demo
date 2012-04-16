@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName">
+	<!--spu搜索 -->
+	<bean id="spuSearchServiceClient" class="com.taobao.item.service.client.SpuSearchServiceClient">
+		<property name="searchManager">
+			<bean class="com.taobao.common.searchengine.DefaultSearchManager"
+				init-method="init" autowire="no">
+				<property name="searchUrl">
+					<ref bean="spuSearchUrl" />
+				</property>
+				<property name="areaName">
+					<value>spu</value>
+				</property>
+				<property name="beanClass">
+					<value>com.taobao.item.search.spu.SpuSearchDO</value>
+				</property>
+				<property name="timeout">
+					<value>4000</value>
+				</property>
+				<property name="connectionTimeout">
+					<value>4000</value>
+				</property>
+				<property name="fieldsMap">
+					<map>
+						<entry key="id" value="spuId"></entry>
+						<entry key="title" value="title"></entry>
+						<entry key="picurl" value="pictUrl"></entry>
+						<entry key="cat" value="category"></entry>
+						<entry key="props" value="properties"></entry>
+						<entry key="aprop" value="affectProperties"></entry>
+						<entry key="status" value="status"></entry>
+						<entry key="features" value="features"></entry>
+						<entry key="price" value="price"></entry>
+						<entry key="tsc" value="tsc"></entry>
+						<entry key="memo" value="memo"></entry>
+						<entry key="oid" value="ownerId"></entry>
+						<entry key="lid" value="lastModifyUserId"></entry>
+					</map>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="spuSearchUrl" class="java.lang.String">
+		<constructor-arg type="java.lang.String"
+			value="http://spu-search.config-vip.taobao.net:2188/bin/search?" />
+	</bean>
+</beans>
