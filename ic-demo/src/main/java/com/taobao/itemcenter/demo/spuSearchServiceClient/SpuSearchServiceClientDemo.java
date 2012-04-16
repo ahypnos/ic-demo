@@ -2,6 +2,7 @@ package com.taobao.itemcenter.demo.spuSearchServiceClient;
 
 import java.util.List;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -25,6 +26,9 @@ public class SpuSearchServiceClientDemo {
 	public void search(SpuSearchQuery ssq){
 		try {
 			List<SpuSearchDO> results = this.spuSearchServiceClient.search(ssq);
+			if(CollectionUtils.isNotEmpty(results)){
+				System.out.println("查询的结果条数为："+results.size());
+			}
 			for(SpuSearchDO spu : results){
 				System.out.println("查询结果为：");
 				System.out.println(spu);
@@ -39,8 +43,10 @@ public class SpuSearchServiceClientDemo {
 		SpuSearchServiceClientDemo sssc = new SpuSearchServiceClientDemo();
 		SpuSearchQuery ssq = new SpuSearchQuery();
 		ssq.setCategoryId(1512);
-		ssq.setPageSize(100);
+		ssq.setProperty("20000:3284608");
+		ssq.setPageSize(1000);
 		sssc.search(ssq);
+		System.exit(0);
 	}
 
 	public SpuSearchServiceClient getSpuSearchServiceClient() {
