@@ -44,6 +44,6 @@
 	
 	<bean id="spuSearchUrl" class="java.lang.String">
 		<constructor-arg type="java.lang.String"
-			value="http://spu-search.config-vip.taobao.net:2188/bin/search?" />
+			value="http://10.232.41.109:2088/bin/search?" />
 	</bean>
 </beans>
