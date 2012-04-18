@@ -42,9 +42,18 @@ public class SpuSearchServiceClientDemo {
 	public static void main(String[] args) {
 		SpuSearchServiceClientDemo sssc = new SpuSearchServiceClientDemo();
 		SpuSearchQuery ssq = new SpuSearchQuery();
-		ssq.setCategoryId(1512);
-		ssq.setProperty("20000:3284608");
-		ssq.setPageSize(1000);
+		//ssq.setCategoryId(1512);
+		//ssq.setProperty("20000:10695");
+		String kvPairs = "20000:10683";
+		StringBuilder sb = new StringBuilder();
+		for(String kv:kvPairs.split(",")){
+			sb.append(kv.trim()).append(",");
+		}
+		String check = sb.toString();
+		ssq.setProperties(check);
+		ssq.setPageSize(10);
+		ssq.setStatus(new int[]{0,1,2,3,-1});
+		//ssq.setPrimarySort(SpuSortField.modify_date);
 		sssc.search(ssq);
 		System.exit(0);
 	}
